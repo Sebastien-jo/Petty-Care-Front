@@ -1,0 +1,82 @@
+import React from 'react'
+import { StyleSheet, Text, View,TouchableOpacity,Image,SafeAreaView  } from 'react-native';
+
+const Home = () => {
+    return(
+        
+        <View style={styles.Home}>
+            <View>
+                <Image source={require("./T.png")}/>
+        
+            </View>
+            <View style={{justifyContent : "space-between", alignContent : "center"}}>
+                <Text style={{fontWeight : 400, fontSize : 14, fontFamily : "Bilo", paddingVertical : 20}}>Préparez-vous à découvrir l’application santé du futur intelligent.</Text>
+                <TouchableOpacity onPress={() => alert("Redirection vers le site e-commerce")} style={styles.ButtonA}>
+                            <Text style={styles.ButtonTextA}>Découvrez nos produits</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.ButtonB}>
+                            <Text style={styles.ButtonTextB}>Découvrez nos produits</Text>
+                </TouchableOpacity>
+            </View>
+        </View>
+    )
+}
+
+export default Home
+
+
+const styles = StyleSheet.create({
+    Home : {
+        flex : 1,
+        alignItems : "center",
+        justifyContent : "space-around",
+        flexDirection : "column",
+        
+    },
+
+    Texte : {
+        fontFamily : "Parisine Plus Std",
+        fontWeight : 700,
+        fontSize : 20,
+        lineHeight : 22,
+        alignSelf : "center",
+     
+        
+    },
+    ButtonA: {
+        elevation: 1,
+        backgroundColor: "#c7ebe6",
+        borderRadius: 18,
+        paddingVertical: 10,
+        paddingHorizontal: 12
+      },
+      ButtonB : {
+        elevation: 1,
+        backgroundColor: "#0F4E4E",
+        borderRadius: 18,
+        paddingVertical: 10,
+        paddingHorizontal: 12,
+        marginVertical : 32,
+        
+      },
+      ButtonTextA: {
+        fontSize: 16,
+        color: "#0F4E4E",
+        fontWeight: 500,
+        alignSelf: "center",
+        textTransform: "uppercase",
+        fontFamily : "Bilo",
+        lineHeight : 21,
+        color : "black"
+      },
+      ButtonTextB: {
+        fontSize: 16,
+        color: "#ffff",
+        fontWeight: 500,
+        alignSelf: "center",
+        textTransform: "uppercase",
+        fontFamily : "Bilo",
+        lineHeight : 21,
+      
+      }
+})
