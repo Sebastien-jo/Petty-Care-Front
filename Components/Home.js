@@ -16,7 +16,7 @@ const Home = ({navigation }) => {
                             <Text style={styles.ButtonTextA}>Découvrez nos produits</Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => navigation.navigate("Install")} style={styles.ButtonB}>
-                            <Text style={styles.ButtonTextB}>Découvrez nos produits</Text>
+                            <Text style={styles.ButtonTextB}>Faites vos premiers pas</Text>
                 </TouchableOpacity>
             </View>
         </View>
