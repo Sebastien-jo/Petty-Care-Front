@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import 'react-native-gesture-handler';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
-
+import Install from "./Components/Install"
 import Home from './Components/Home'
 const Stack = createStackNavigator();
 export default function App() {
@@ -11,6 +11,7 @@ export default function App() {
    <NavigationContainer>
     <Stack.Navigator >
            <Stack.Screen name=" " component={Home}  />
+           <Stack.Screen name="Install" component={Install}  />
     </Stack.Navigator>
    </NavigationContainer>
   );

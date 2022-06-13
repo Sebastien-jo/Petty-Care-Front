@@ -1,20 +1,21 @@
 import React from 'react'
 import { StyleSheet, Text, View,TouchableOpacity,Image,SafeAreaView  } from 'react-native';
-
-const Home = () => {
+const Home = ({navigation }) => {
     return(
         
         <View style={styles.Home}>
             <View>
+                
                 <Image source={require("./T.png")}/>
         
             </View>
             <View style={{justifyContent : "space-between", alignContent : "center"}}>
-                <Text style={{fontWeight : 400, fontSize : 14, fontFamily : "Bilo", paddingVertical : 20}}>Préparez-vous à découvrir l’application santé du futur intelligent.</Text>
+                <Text style={{ fontSize : 14,  paddingVertical : 20, textAlign : "center"}}>Préparez-vous à découvrir l’application santé du futur intelligent. </Text>
+              
                 <TouchableOpacity onPress={() => alert("Redirection vers le site e-commerce")} style={styles.ButtonA}>
                             <Text style={styles.ButtonTextA}>Découvrez nos produits</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.ButtonB}>
+                <TouchableOpacity onPress={() => navigation.navigate("Install")} style={styles.ButtonB}>
                             <Text style={styles.ButtonTextB}>Découvrez nos produits</Text>
                 </TouchableOpacity>
             </View>
@@ -62,20 +63,20 @@ const styles = StyleSheet.create({
       ButtonTextA: {
         fontSize: 16,
         color: "#0F4E4E",
-        fontWeight: 500,
+       
         alignSelf: "center",
         textTransform: "uppercase",
-        fontFamily : "Bilo",
+        
         lineHeight : 21,
         color : "black"
       },
       ButtonTextB: {
         fontSize: 16,
         color: "#ffff",
-        fontWeight: 500,
+       
         alignSelf: "center",
         textTransform: "uppercase",
-        fontFamily : "Bilo",
+        
         lineHeight : 21,
       
       }
