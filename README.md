@@ -1,0 +1,1 @@
+pour démarrer le serveur : expo start
