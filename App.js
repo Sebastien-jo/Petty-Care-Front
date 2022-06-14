@@ -11,7 +11,7 @@ export default function App() {
    <NavigationContainer>
     <Stack.Navigator >
            <Stack.Screen name=" " component={Home}  />
-           <Stack.Screen name="Install" component={Install}  />
+           <Stack.Screen name="Install" component={Install}   />
     </Stack.Navigator>
    </NavigationContainer>
   );

@@ -1,6 +1,9 @@
 import React from 'react'
-import { StyleSheet, Text, View,TouchableOpacity,Image,SafeAreaView,FlatList  } from 'react-native';
+import { StyleSheet, Text, View,TouchableOpacity,Image,SafeAreaView,FlatList , ScrollView, } from 'react-native';
 const Install = () => {
+
+
+
 
     const DATA = [
         {
@@ -18,23 +21,33 @@ const Install = () => {
       ];
 
       const renderItem = ({ item }) => (
-        <Text style={{lineHeight : 28, fontSize : 20, paddingLeft : 10}}>{item.title}</Text>
+        <View>
+
+        <Text style={{lineHeight : 25, fontSize : 15, paddingLeft : 10, padding : 10,}}>{item.title}</Text>
+        </View>
       );
     return(
         
         <View style={styles.Install}>
+            <SafeAreaView>
             <View>
-            <Image style={{width : 161.55, borderRadius : 99,height : 161.55,marginBottom : 20}} source={require("./ImgRad.png")} />  
-               
+            <Image style={{width : 161.55, borderRadius : 99,  alignSelf : "center",}}  source={require("./ImgRad.png")} />  
+               <Text style={{textAlign : "center"}}>Petty Care</Text>
             </View>
-                <FlatList style={{paddingVertical : 150}}
+
+            <Text style={{ textAlign : "center",fontSize : 20, height : 66, width : 288}}>Lançons-nous ! Voici ce que vous devez faire avant de commencer :</Text>
+
+                <FlatList style={{paddingVertical : 50}}
                 data={DATA}
                 renderItem={renderItem}
                 keyExtractor={item => item.id}
                 />
+                
+                
                 <TouchableOpacity  style={styles.ButtonB}>
                             <Text style={styles.ButtonTextB}>Continuer</Text>
                 </TouchableOpacity>
+                </SafeAreaView>
         </View>
     )
 }
@@ -48,17 +61,16 @@ const styles = StyleSheet.create({
         alignItems : "center",
         justifyContent : "space-between",
         flexDirection : "column",
-        textAlign : "center"
+        textAlign : "center",
+       
     },
   
  
       ButtonTextB: {
         fontSize: 16,
         color: "#ffff",
-       
         alignSelf: "center",
         textTransform: "uppercase",
-        
         lineHeight : 21,
       
       },
@@ -67,9 +79,12 @@ const styles = StyleSheet.create({
         backgroundColor: "#0F4E4E",
         borderRadius: 18,
         paddingVertical: 14,
-        paddingHorizontal: 100,
+        paddingHorizontal: 10,
         marginVertical : 32,
-        
+        width : 300,
+        marginLeft : "auto",
+        marginRight : "auto"
+         
       },
 
 })
