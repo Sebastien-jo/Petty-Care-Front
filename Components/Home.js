@@ -1,15 +1,15 @@
 import React from 'react'
 import { StyleSheet, Text, View,TouchableOpacity,Image,SafeAreaView  } from 'react-native';
-import Logo from '../assets/Logo.svg'
+import Logo from "./Logo"
 const Home = ({navigation }) => {
     return(
         
         <View style={styles.Home}>
             <View>
                 
-                <Image  source={Logo}/>
-                <Text style={{textAlign : "center",fontSize : 20,color : "#0F4E4E"}}>Bienvenue chez Petty Care !</Text>
+                <Logo />
             </View>
+                <Text style={{textAlign : "center",fontSize : 25,color : "#0F4E4E"}}>Bienvenue chez Petty Care !</Text>
             <View style={{justifyContent : "space-between", alignContent : "center"}}>
                 <Text style={{ fontSize : 14,  paddingVertical : 20, textAlign : "center"}}>Préparez-vous à découvrir l’application santé du futur intelligent. </Text>
               
