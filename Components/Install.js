@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View,TouchableOpacity,Image,SafeAreaView,FlatList , ScrollView, } from 'react-native';
-const Install = () => {
+
+const Install = ({navigation}) => {
 
 
 
@@ -29,25 +30,29 @@ const Install = () => {
     return(
         
         <View style={styles.Install}>
-            <SafeAreaView>
+            
             <View>
             <Image style={{width : 161.55, borderRadius : 99,  alignSelf : "center",}}  source={require("./ImgRad.png")} />  
-               <Text style={{textAlign : "center"}}>Petty Care</Text>
+               <Text style={{textAlign : "center",marginVertical : 10,padding : 10}}>Petty Care</Text>
             </View>
+            
+            <View style={{flex : 2}}>
 
-            <Text style={{ textAlign : "center",fontSize : 20, height : 66, width : 288}}>Lançons-nous ! Voici ce que vous devez faire avant de commencer :</Text>
-
-                <FlatList style={{paddingVertical : 50}}
+            <Text style={{ textAlign : "center",fontSize : 20, color : "#0F4E4E",padding :10}}>Lançons-nous ! Voici ce que vous devez faire avant de commencer :</Text>
+            <FlatList style={{paddingVertical : 50}}
                 data={DATA}
                 renderItem={renderItem}
                 keyExtractor={item => item.id}
                 />
+                </View>
+            
                 
                 
-                <TouchableOpacity  style={styles.ButtonB}>
+                <TouchableOpacity onPress={() => navigation.navigate("CGU")}  style={styles.ButtonB}>
                             <Text style={styles.ButtonTextB}>Continuer</Text>
                 </TouchableOpacity>
-                </SafeAreaView>
+              
+                
         </View>
     )
 }
@@ -60,8 +65,9 @@ const styles = StyleSheet.create({
         flex : 1,
         alignItems : "center",
         justifyContent : "space-between",
-        flexDirection : "column",
+       
         textAlign : "center",
+        marginVertical : 10
        
     },
   
