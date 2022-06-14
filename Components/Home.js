@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
         alignItems : "center",
         justifyContent : "space-around",
         flexDirection : "column",
+
         
     },
 

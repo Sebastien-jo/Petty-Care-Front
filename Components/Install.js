@@ -33,12 +33,12 @@ const Install = ({navigation}) => {
             
             <View>
             <Image style={{width : 161.55, borderRadius : 99,  alignSelf : "center",}}  source={require("./ImgRad.png")} />  
-               <Text style={{textAlign : "center",marginVertical : 10,padding : 10}}>Petty Care</Text>
+               <Image source={require("../assets/Text.png")}  style={{width : 138, height : 31,marginVertical : 10,alignSelf : "center"}}  />
             </View>
             
             <View style={{flex : 2}}>
 
-            <Text style={{ textAlign : "center",fontSize : 20, color : "#0F4E4E",padding :10}}>Lançons-nous ! Voici ce que vous devez faire avant de commencer :</Text>
+            <Text style={{ fontSize : 20, color : "#0F4E4E",padding :10}}>Lançons-nous ! Voici ce que vous devez faire avant de commencer :</Text>
             <FlatList style={{paddingVertical : 50}}
                 data={DATA}
                 renderItem={renderItem}
