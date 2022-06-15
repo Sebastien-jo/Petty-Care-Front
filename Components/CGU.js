@@ -19,8 +19,7 @@ const CGU = ({navigation}) => {
 
       const renderItem = ({ item }) => (
         <View>
-
-        <Text style={{lineHeight : 25, fontSize : 15, paddingLeft : 10, padding : 10,}}>{item.title}</Text>
+        <Text style={{lineHeight : 25, fontSize : 15, paddingLeft : 5, padding : 10,}}>{item.title}</Text>
         </View>
       );
 
@@ -52,7 +51,8 @@ const styles = StyleSheet.create({
         justifyContent : "center",
         marginVertical : 20,
         paddingLeft : 10,
-       textAlign : "center"
+       textAlign : "center",
+       
     },
 
     Texte : {

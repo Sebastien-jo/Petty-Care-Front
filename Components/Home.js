@@ -7,7 +7,7 @@ const Home = ({navigation  }) => {
         
         <View style={styles.Home}>
             <View>
-                <Logo /> {/* Logo Home page dans un Composant a part  */}
+                <Logo /> 
             </View>
                 <Text style={{textAlign : "center",fontSize : 25,color : "#0F4E4E"}}>Bienvenue chez Petty Care !</Text>
             <View style={{justifyContent : "space-between", alignContent : "center"}}>
@@ -27,7 +27,7 @@ const Home = ({navigation  }) => {
 
 export default Home
 
-/* css */
+
 const styles = StyleSheet.create({
     Home : {
         flex : 1,
