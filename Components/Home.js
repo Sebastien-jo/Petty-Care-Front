@@ -1,18 +1,19 @@
 import React from 'react'
 import { StyleSheet, Text, View,TouchableOpacity,Image,SafeAreaView  } from 'react-native';
 import Logo from "./Logo"
-const Home = ({navigation }) => {
+
+const Home = ({navigation  }) => { 
     return(
         
         <View style={styles.Home}>
             <View>
-                
-                <Logo />
+                <Logo /> {/* Logo Home page dans un Composant a part  */}
             </View>
                 <Text style={{textAlign : "center",fontSize : 25,color : "#0F4E4E"}}>Bienvenue chez Petty Care !</Text>
             <View style={{justifyContent : "space-between", alignContent : "center"}}>
                 <Text style={{ fontSize : 14,  paddingVertical : 20, textAlign : "center"}}>Préparez-vous à découvrir l’application santé du futur intelligent. </Text>
               
+              {/* les Buttons  */}
                 <TouchableOpacity onPress={() => alert("Redirection vers le site e-commerce")} style={styles.ButtonA}>
                             <Text style={styles.ButtonTextA}>Découvrez nos produits</Text>
                 </TouchableOpacity>
@@ -26,7 +27,7 @@ const Home = ({navigation }) => {
 
 export default Home
 
-
+/* css */
 const styles = StyleSheet.create({
     Home : {
         flex : 1,
@@ -43,6 +44,7 @@ const styles = StyleSheet.create({
         fontSize : 20,
         lineHeight : 22,
         alignSelf : "center",
+        
      
         
     },
