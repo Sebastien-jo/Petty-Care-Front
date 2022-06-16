@@ -15,7 +15,7 @@ const Login = ({navigation}) => {
      }
      setError(false)
      alert("ok")
-     navigation.navigate("Welcome")
+     navigation.navigate("Tab")
     }
 
   return (
