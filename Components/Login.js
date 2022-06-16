@@ -4,7 +4,7 @@ import Checkbox from 'expo-checkbox';
 
 
 
-const Login = () => {
+const Login = ({navigation}) => {
     const [isChecked, setChecked] = useState(false); //checkbox
     const [username , setUsername] = useState("") //input username
     const [password , setPassword] = useState("") // input password
