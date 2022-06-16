@@ -8,6 +8,18 @@ const Login = () => {
     const [isChecked, setChecked] = useState(false); //checkbox
     const [username , setUsername] = useState("") //input username
     const [password , setPassword] = useState("") // input password
+    const [error , setError] = useState(false)
+
+
+    const handleSubmit = (e) => {
+      e.preventDefault()
+     if(!username || !password){
+      setError(true)
+      return;
+     }
+     setError(false)
+     alert("ok")
+    }
 
   return (
     <View style={styles.container}>
@@ -40,8 +52,8 @@ const Login = () => {
           </View>
           <Text style={{color : "#0F4E4E", textDecorationLine : "underline"  }}>Mot de passe oublié</Text>
       </View>
-
-      <TouchableOpacity   style={styles.ButtonB}>
+      {error ? <Text style={{color: "red", marginVertical : 8, textAlign : "center"}}>Mot de passe ou nom d’utilisateur incorrect</Text> : null}
+      <TouchableOpacity onPress={handleSubmit}   style={styles.ButtonB}>
                             <Text style={styles.ButtonTextB}>Se connecter</Text>
     </TouchableOpacity>
 
