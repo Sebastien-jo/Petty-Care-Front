@@ -2,19 +2,11 @@ import React,{useState} from "react"
 import { View, Text,StyleSheet,Image,TextInput, TouchableOpacity } from 'react-native'
 import Checkbox from 'expo-checkbox';
 
-
-
-<<<<<<< HEAD
 const Login = ({navigation}) => {
-=======
-const Login = () => {
->>>>>>> 40c5b6a57ab092c72923c583ccd7a4f9cb2f5356
     const [isChecked, setChecked] = useState(false); //checkbox
     const [username , setUsername] = useState("") //input username
     const [password , setPassword] = useState("") // input password
     const [error , setError] = useState(false)
-
-
     const handleSubmit = (e) => {
       e.preventDefault()
      if(!username || !password){
@@ -23,10 +15,7 @@ const Login = () => {
      }
      setError(false)
      alert("ok")
-<<<<<<< HEAD
-     navigation.navifate("Welcome")
-=======
->>>>>>> 40c5b6a57ab092c72923c583ccd7a4f9cb2f5356
+     navigation.navigate("Welcome")
     }
 
   return (
@@ -54,9 +43,6 @@ const Login = () => {
           color={isChecked ? '#4630EB' : undefined}
           />
         <Text style={{color : "#0F4E4E"}}>Se souvenir de moi</Text>
-
-
-
           </View>
           <Text style={{color : "#0F4E4E", textDecorationLine : "underline"  }}>Mot de passe oublié</Text>
       </View>
