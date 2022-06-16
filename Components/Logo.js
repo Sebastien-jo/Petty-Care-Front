@@ -20,6 +20,6 @@ marginVertical : 20,
   alignSelf : "center",
 shadowOpacity:  0.17,
 shadowRadius: 3.05,
-elevation: 4
+
 }
 })
