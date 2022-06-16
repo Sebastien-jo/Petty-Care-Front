@@ -6,9 +6,15 @@ import { NavigationContainer } from '@react-navigation/native';
 import Install from "./Components/Install"
 import Home from './Components/Home'
 import CGU from "./Components/CGU"
+<<<<<<< Updated upstream
 
 
 
+=======
+import PolitiqueDeconfidentialité from './Components/PolitiqueDeconfidentialité'
+import Login from "./Components/Login"
+import Tab from './TabNavigator '
+>>>>>>> Stashed changes
 
 const Stack = createStackNavigator();
 export default function App() {
@@ -21,6 +27,13 @@ export default function App() {
            <Stack.Screen name=" " component={Home}  />
            <Stack.Screen name="Install" component={Install}   />
            <Stack.Screen name="CGU" component={CGU}   />
+<<<<<<< Updated upstream
+=======
+           <Stack.Screen name="Politique de confidentialité" component={PolitiqueDeconfidentialité}   />
+           <Stack.Screen name="Connexion" component={Login}   />
+           <Stack.Screen name="Connexion" component={Login}   />
+           <Stack.Screen name="Tab" component={TabNavigator}   />
+>>>>>>> Stashed changes
     </Stack.Navigator>
    </NavigationContainer>
   );
