@@ -1,10 +1,9 @@
 import { View, Text,Image } from 'react-native'
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Ionicons } from "@expo/vector-icons";
 
 import Welcome from "./Components/Welcome"
-import Home from "./Components/Home"
+
 const Tab = createBottomTabNavigator();
 const TabNavigator = () => {
     return <Tab.Navigator>
