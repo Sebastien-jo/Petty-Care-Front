@@ -1,7 +1,7 @@
 import { View, Text,StyleSheet,FlatList,TouchableOpacity } from 'react-native'
 import React from 'react'
 
-const CGU = () => {
+const CGU = ({navigation}) => {
 
 
     const DATA = [
@@ -19,8 +19,7 @@ const CGU = () => {
 
       const renderItem = ({ item }) => (
         <View>
-
-        <Text style={{lineHeight : 25, fontSize : 15, paddingLeft : 10, padding : 10,}}>{item.title}</Text>
+        <Text style={{lineHeight : 25, fontSize : 15, paddingLeft : 5, padding : 10,}}>{item.title}</Text>
         </View>
       );
 
@@ -36,7 +35,7 @@ const CGU = () => {
                 />
       <Text style={{fontSize : 14}} >Vous pouvez lire l’intégralité des Conditions d’utilisation ci-dessous. Vous souhaitez les relire ? Elles sont égalements disponibles dans la section Paramètres.</Text>
       <Text style={{textAlign : "center",marginVertical : 20}}>Acceptez-vous ces conditions d’utilisation ?</Text>
-      <TouchableOpacity   style={styles.ButtonB}>
+      <TouchableOpacity onPress={() => navigation.navigate("Politique de confidentialité")}   style={styles.ButtonB}>
                             <Text style={styles.ButtonTextB}>j'accepte</Text>
         </TouchableOpacity>
     </View>
@@ -52,7 +51,8 @@ const styles = StyleSheet.create({
         justifyContent : "center",
         marginVertical : 20,
         paddingLeft : 10,
-       textAlign : "center"
+       textAlign : "center",
+       
     },
 
     Texte : {
