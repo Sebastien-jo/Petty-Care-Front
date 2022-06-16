@@ -7,10 +7,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import Install from "./Components/Install"
 import Home from './Components/Home'
 import CGU from "./Components/CGU"
-import PolitiqueDeconfidentialité from './Components/PolitiqueDeconfidentialité'
 import Login from "./Components/Login"
-import PolitiqueDeconfidentialité from './Components/PolitiqueDeconfidentialité'
-import Login from "./Components/Login"
+import PolitiqueDeconfidentialité from "./Components/PolitiqueDeconfidentialité"
 import Tab from './TabNavigator '
 
 const Stack = createStackNavigator();
