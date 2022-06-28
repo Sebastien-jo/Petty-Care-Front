@@ -32,15 +32,6 @@ export default StyleSheet.create ({
         color: "#0F4E4E"
     },
 
-    currentText: {
-        fontFamily: "Bilo",
-        fontWeight: 300,
-        fontSize: 14,
-        color: "#0F4E4E",
-        paddingVertical: 20,
-        textAlign: "center"
-    },
-
     secondaryCta: {
         elevation: 1,
         backgroundColor: "#c7ebe6",
@@ -83,5 +74,25 @@ export default StyleSheet.create ({
         marginTop: 10,
         marginBottom: 30,
         alignSelf: "center"
+    },
+    
+    currentText: {
+        fontFamily: "Bilo",
+        fontWeight: 300,
+        fontSize: 14,
+        color: "#0F4E4E",
+        paddingVertical: 20,
+        textAlign: "center"
+    },
+
+    itemTextList: {
+        fontFamily: "Bilo",
+        lineHeight: 18,
+        fontWeight: 300,
+        fontSize: 14,
+        textAlign: "center",
+        alignSelf: "center",
+        marginTop: 10,
+        color: "#0F4E4E",
     }
 });
