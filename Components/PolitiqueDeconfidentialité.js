@@ -6,7 +6,7 @@ const PolitiqueDeconfidentialité = ({navigation}) => {
     <View style={styles.container}>
       <View>
             <Image style={{width : 161.55, borderRadius : 99,  alignSelf : "center",}}  source={require("./ImgRad.png")} />  
-               <Image source={require("../assets/Text.png")}  style={{width : 138, height : 31,marginVertical : 10,alignSelf : "center"}}  />
+               <Image source={require("../assets/Logo_Viridian_Green_Inline.png")}  style={{width : 138, height : 31,marginVertical : 10,alignSelf : "center"}}  />
                <Text style={{fontSize : 30,color : "#0F4E4E",marginVertical : 20,paddingLeft : 16}}>Politique de confidentialité</Text>
                <Text style={styles.Texte}> Nous respectons votre vie privée et nous vous le prouvons. Nous avons à coeur de nous montrer ouverts et transparents, et de veiller à ce que les décisions vous appartiennent.</Text>
                <Text style={styles.Texte}>Nous ne vendons pas vos données personnelles. Vos données personnelles seront traitées conformément à notre Politique de confidentialité, consultable ici.</Text>

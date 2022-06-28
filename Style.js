@@ -3,7 +3,7 @@ import {StyleSheet} from "react-native";
 export default StyleSheet.create ({
     container: {
         flex: 1,
-        margin: 20,
+        padding: 20,
         backgroundColor: "#FFFF",
         alignItems: "center",
         justifyContent: "space-around",
@@ -76,4 +76,12 @@ export default StyleSheet.create ({
         letterSpacing: 0.2,
         color: "#FFFF"
     },
+
+    logoInline: {
+        width: 150,
+        height: 35,
+        marginTop: 10,
+        marginBottom: 30,
+        alignSelf: "center"
+    }
 });

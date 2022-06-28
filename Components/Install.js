@@ -11,7 +11,7 @@ const Install = ({navigation}) => {
         },
         {
           id: '2',
-          title: '2. Choissiez les données que nous pouvons utiliser pour personnaliser votre expérience et optimiser nos produits ',
+          title: '2. Choisissez les données que nous pouvons utiliser pour personnaliser votre expérience et optimiser nos produits',
         },
         {
           id: '3',
@@ -21,29 +21,28 @@ const Install = ({navigation}) => {
 
     const renderItem = ({item}) => (
         <View>
-            <Text style={{lineHeight: 25, fontSize: 15, paddingLeft: 10, padding: 10}}>{item.title}</Text>
+            <Text style={styles.item}>{item.title}</Text>
         </View>
     );
 
     return(       
-        <View style={styles.Install}>
+        <View style={styles.install}>
             
             <View>
-                <Image style={{width: 161.55, borderRadius: 99, alignSelf: "center"}} source={require("./ImgRad.png")} />
+                <Image style={{width: 170, alignSelf: "center"}} source={require("./ImgRad.png")} />
 
-                <Image source={require("../assets/Text.png")} style={{width: 138, height: 31, marginVertical: 10, alignSelf: "center"}}/>
+                <Image source={require("../assets/Logo_Viridian_Green_Inline.png")} style={Style.logoInline}/>
             </View>
             
             <View style={{flex: 2}}>
+                <Text style={Style.primaryTitle}>Lançons-nous ! <br></br> Voici ce que vous devez faire avant de commencer :</Text>
 
-            <Text style={Style.primaryTitle}>Lançons-nous ! Voici ce que vous devez faire avant de commencer :</Text>
-
-            <FlatList style={{paddingVertical: 50}}
-                data={DATA}
-                renderItem={renderItem}
-                keyExtractor={item => item.id}
-            />
-            
+                <FlatList
+                    style={{paddingVertical: 50}}
+                    data={DATA}
+                    renderItem={renderItem}
+                    keyExtractor={item => item.id}
+                />           
             </View>
             
             <TouchableOpacity onPress={() => navigation.navigate("CGU")} style={Style.primaryCta}>
@@ -57,11 +56,20 @@ const Install = ({navigation}) => {
 export default Install
 
 const styles = StyleSheet.create({
-    Install: {
+    install: {
         flex: 1,
         alignItems: "center",
         justifyContent: "space-between",
         textAlign: "center",
-        marginVertical: 10    
+        padding: 20,
+        backgroundColor: "#FFF"   
+    },
+
+    item: {
+      lineHeight: 20,
+      fontSize: 14,
+      paddingLeft: 20,
+      paddingRight: 20,
+      marginTop: 10
     }
 })
