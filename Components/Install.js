@@ -21,12 +21,12 @@ const Install = ({navigation}) => {
 
     const renderItem = ({item}) => (
         <View>
-            <Text style={styles.item}>{item.title}</Text>
+            <Text style={Style.itemTextList}>{item.title}</Text>
         </View>
     );
 
     return(       
-        <View style={styles.install}>
+        <View style={Style.container}>
             
             <View>
                 <Image style={{width: 170, alignSelf: "center"}} source={require("./ImgRad.png")} />
@@ -38,7 +38,6 @@ const Install = ({navigation}) => {
                 <Text style={Style.primaryTitle}>Lançons-nous ! <br></br> Voici ce que vous devez faire avant de commencer :</Text>
 
                 <FlatList
-                    style={{paddingVertical: 50}}
                     data={DATA}
                     renderItem={renderItem}
                     keyExtractor={item => item.id}
@@ -54,22 +53,3 @@ const Install = ({navigation}) => {
 }
 
 export default Install
-
-const styles = StyleSheet.create({
-    install: {
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "space-between",
-        textAlign: "center",
-        padding: 20,
-        backgroundColor: "#FFF"   
-    },
-
-    item: {
-      lineHeight: 20,
-      fontSize: 14,
-      paddingLeft: 20,
-      paddingRight: 20,
-      marginTop: 10
-    }
-})
