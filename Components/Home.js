@@ -1,87 +1,50 @@
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
-import { StyleSheet, Text, View,TouchableOpacity,Image,SafeAreaView  } from 'react-native';
-import Logo from "./Logo"
 
-const Home = ({navigation  }) => { 
-    return(
-        
-        <View style={styles.Home}>
-            <View>
-                <Logo /> 
-            </View>
-                <Text style={{textAlign : "center",fontSize : 25,color : "#0F4E4E"}}>Bienvenue chez Petty Care !</Text>
-            <View style={{justifyContent : "space-between", alignContent : "center"}}>
-                <Text style={{ fontSize : 14,  paddingVertical : 20, textAlign : "center"}}>Préparez-vous à découvrir l’application santé du futur intelligent. </Text>
-              
-              {/* les Buttons  */}
-                <TouchableOpacity onPress={() => alert("Redirection vers le site e-commerce")} style={styles.ButtonA}>
-                            <Text style={styles.ButtonTextA}>Découvrez nos produits</Text>
+const Welcome = () => {
+  return (
+    <View style={styles.container}>
+        <Image style={{borderRadius : 99, width : 156, height : 156 }} source={require("./ImgRad.png")} />
+        <Text style={{fontSize : 20,textAlign : "center", marginVertical : 25, color : "#0F4E4E"}}>Créer le profil de votre {"\n"} animal pour pouvoir jouer {"\n"} avec lui !</Text>
+        <Text style={styles.Texte}>Une fois son profil créé, vous n’aurez plus qu’à {"\n"} configurer son collier.</Text>
+        <TouchableOpacity   style={styles.ButtonB}>
+                            <Text style={styles.ButtonTextB}>Créer un profil</Text>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate("Install")} style={styles.ButtonB}>
-                            <Text style={styles.ButtonTextB}>Faites vos premiers pas</Text>
-                </TouchableOpacity>
-            </View>
-        </View>
-    )
+    </View>
+  )
 }
 
-export default Home
-
+export default Welcome
 
 const styles = StyleSheet.create({
-    Home : {
+    container : {
         flex : 1,
-        alignItems : "center",
-        justifyContent : "space-around",
-        flexDirection : "column",
-
-        
+        justifyContent : "center",
+        alignItems : "center"
     },
 
     Texte : {
-        fontFamily : "Parisine Plus Std",
-        fontWeight : 700,
-        fontSize : 20,
-        lineHeight : 22,
-        alignSelf : "center",
-        
-     
-        
+        fontSize : 14,
+        textAlign : "center"
     },
-    ButtonA: {
-        elevation: 1,
-        backgroundColor: "#c7ebe6",
-        borderRadius: 18,
-        paddingVertical: 10,
-        paddingHorizontal: 12
+    ButtonTextB: {
+        fontSize: 16,
+        color: "#ffff",
+        alignSelf: "center",
+        textTransform: "uppercase",
+        lineHeight : 21,
+      
       },
       ButtonB : {
         elevation: 1,
         backgroundColor: "#0F4E4E",
         borderRadius: 18,
-        paddingVertical: 10,
-        paddingHorizontal: 12,
+        paddingVertical: 14,
+        paddingHorizontal: 10,
         marginVertical : 32,
-        
+        width : 300,
+        marginLeft : "auto",
+        marginRight : "auto"
+         
       },
-      ButtonTextA: {
-        fontSize: 16,
-        color: "#0F4E4E",
-       
-        alignSelf: "center",
-        textTransform: "uppercase",
-        
-        lineHeight : 21,
-        color : "black"
-      },
-      ButtonTextB: {
-        fontSize: 16,
-        color: "#ffff",
-       
-        alignSelf: "center",
-        textTransform: "uppercase",
-        
-        lineHeight : 21,
-      
-      }
 })
