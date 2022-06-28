@@ -14,12 +14,12 @@ const Home = ({navigation}) => {
             <View>
                 <Text style={Style.currentText}>L'application santé de votre animal de compagnie</Text>
               
-                <TouchableOpacity onPress={() => alert("Redirection vers le site e-commerce")} style={Style.primaryCta}>
-                    <Text style={Style.primaryCtaText}>Découvrez nos produits</Text>
+                <TouchableOpacity onPress={() => alert("Redirection vers le site e-commerce")} style={Style.secondaryCta}>
+                    <Text style={Style.secondaryCtaText}>Découvrez nos produits</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={() => navigation.navigate("Install")} style={Style.secondaryCta}>
-                    <Text style={Style.secondaryCtaText}>Faites vos premiers pas</Text>
+                <TouchableOpacity onPress={() => navigation.navigate("Install")} style={Style.primaryCta}>
+                    <Text style={Style.primaryCtaText}>Faites vos premiers pas</Text>
                 </TouchableOpacity>
             </View>
         </View>

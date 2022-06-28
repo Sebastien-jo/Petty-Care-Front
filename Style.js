@@ -41,23 +41,24 @@ export default StyleSheet.create ({
         textAlign: "center"
     },
 
-    primaryCta: {
+    secondaryCta: {
         elevation: 1,
         backgroundColor: "#c7ebe6",
         borderRadius: 25,
         paddingVertical: 10,
         paddingHorizontal: 12,
         textAlign: "center",
+        width: 300
     },
 
-    primaryCtaText: {
+    secondaryCtaText: {
         textTransform: "uppercase",
         fontFamily: "Bilo",
         fontWeight: 500,
         color: "#0F4E4E"
     },
 
-    secondaryCta: {
+    primaryCta: {
         elevation: 1,
         backgroundColor: "#0F4E4E",
         borderRadius: 25,
@@ -65,14 +66,10 @@ export default StyleSheet.create ({
         paddingHorizontal: 12,
         marginVertical: 30,
         textAlign: "center",
-        textTransform: "uppercase",
-        fontFamily: "Bilo",
-        fontWeight: 400,
-        letterSpacing: 0.2,
-        color: "#FFF"
+        width: 300
     },
 
-    secondaryCtaText: {
+    primaryCtaText: {
         textTransform: "uppercase",
         fontFamily: "Bilo",
         fontWeight: 400,
