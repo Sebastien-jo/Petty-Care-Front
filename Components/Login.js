@@ -20,7 +20,7 @@ const Login = ({navigation}) => {
 
   return (
     <View style={styles.container}>
-      <Image source={require("../assets/Text.png")}  style={{width : 178, height : 31,marginVertical : 10,alignSelf : "center"}}  />
+      <Image source={require("../assets/Image_Cat_Login.png")}  style={{width : 178, height : 31,marginVertical : 10,alignSelf : "center"}}  />
       <Text  style={{textAlign : "center",marginVertical : 15,fontSize : 22,color : "#0F4E4E"}}>Connexion à votre compte</Text>
       <View style={{marginVertical : 25}}>
       <Text style={styles.label}>Votre identifiant</Text>

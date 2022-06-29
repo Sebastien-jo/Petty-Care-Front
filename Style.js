@@ -5,7 +5,7 @@ export default StyleSheet.create ({
         flex: 1,
         paddingLeft: 20,
         paddingRight: 20,
-        paddingTop: 40,
+        paddingTop: 20,
         paddingBottom: 40,
         backgroundColor: "#FFFF",
         alignItems: "center",
@@ -107,5 +107,13 @@ export default StyleSheet.create ({
         color: "#151515",
         paddingVertical: 0,
         textAlign: "center"
+    },
+
+    imageCircle: {
+        borderRadius: 99,
+        alignSelf: "center",
+        width: 160,
+        height: 160,
+        margin: 20
     }
 });

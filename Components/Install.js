@@ -1,5 +1,5 @@
 import React from 'react'
-import {StyleSheet, Text, View, TouchableOpacity, Image, FlatList} from 'react-native';
+import {Text, View, TouchableOpacity, Image, FlatList} from 'react-native';
 import Style from '../Style';
 
 const Install = ({navigation}) => {
@@ -29,7 +29,7 @@ const Install = ({navigation}) => {
         <View style={Style.container}>
             
             <View>
-                <Image style={{width: 170, alignSelf: "center"}} source={require("./ImgRad.png")}/>
+                <Image style={Style.imageCircle} source={require("../assets/Image_Cat_Install.png")}/>
 
                 <Image source={require("../assets/Logo_Viridian_Green_Inline.png")} style={Style.logoInline}/>
             </View>
