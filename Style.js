@@ -7,7 +7,7 @@ export default StyleSheet.create ({
         paddingRight: 20,
         paddingTop: 20,
         paddingBottom: 40,
-        backgroundColor: "#FFFF",
+        backgroundColor: "#FFFFFF",
         alignItems: "center",
         justifyContent: "space-between",
         flexDirection: "column" 
@@ -52,7 +52,7 @@ export default StyleSheet.create ({
         fontFamily: "Bilo",
         fontWeight: 400,
         letterSpacing: 0.4,
-        color: "#FFFF"
+        color: "#FFFFFF"
     },
 
     secondaryCta: {
@@ -71,6 +71,25 @@ export default StyleSheet.create ({
         fontFamily: "Bilo",
         fontWeight: 500,
         color: "#0F4E4E"
+    },
+
+    tertiaryCta: {
+        elevation: 1,
+        backgroundColor: "#FFFF",
+        borderRadius: 25,
+        border: "1px solid #742942",
+        paddingVertical: 10,
+        paddingHorizontal: 12,
+        marginTop: 10,
+        textAlign: "center",
+        width: 300
+    },
+
+    tertiaryCtaText: {
+        textTransform: "uppercase",
+        fontFamily: "Bilo",
+        fontWeight: 500,
+        color: "#742942"
     },
 
     logoInline: {
@@ -115,5 +134,43 @@ export default StyleSheet.create ({
         width: 160,
         height: 160,
         margin: 20
+    },
+
+    labelText: {
+        fontSize : 14,
+        backgroundColor: "#FFFFFF",
+        border: "1px solid #0F4E4E",
+        borderRadius: 25,
+        paddingVertical: 10,
+        paddingHorizontal: 12,
+        marginTop: 10,
+        marginBottom: 10,
+        textAlign: "left",
+        width: 300
+    },
+
+    checkbox: {
+        width: 18,
+        height: 18,
+        borderRadius: 8,
+        marginRight: 5
+    },
+
+    legendCheckbox: {
+        fontSize: 12,
+        color: "#0F4E4E"
+    },
+
+    linkText: {
+        fontSize: 12,
+        color: "#0F4E4E",
+        textDecorationLine: "underline"
+    },
+
+    errorText: {
+        fontSize: 12,
+        color: "#FF6480",
+        textAlign : "center",
+        marginVertical: 10
     }
 });
