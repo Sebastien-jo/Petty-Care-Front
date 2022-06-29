@@ -3,16 +3,19 @@ import {StyleSheet} from "react-native";
 export default StyleSheet.create ({
     container: {
         flex: 1,
-        padding: 20,
+        paddingLeft: 20,
+        paddingRight: 20,
+        paddingTop: 40,
+        paddingBottom: 40,
         backgroundColor: "#FFFF",
         alignItems: "center",
-        justifyContent: "space-around",
+        justifyContent: "space-between",
         flexDirection: "column" 
     },
 
     primaryTitle: {
         fontFamily: "Parisine Plus Std",
-        fontSize: 24,
+        fontSize: 22,
         fontWeight: 700,
         color: "#0F4E4E",
         textAlign: "center"
@@ -22,7 +25,8 @@ export default StyleSheet.create ({
         fontFamily: "Parisine Plus Std",
         fontSize: 20,
         fontWeight: 700,
-        color: "#0F4E4E"
+        color: "#0F4E4E",
+        textAlign: "left"
     },
 
     tertiaryTitle: {
@@ -32,12 +36,32 @@ export default StyleSheet.create ({
         color: "#0F4E4E"
     },
 
+    primaryCta: {
+        elevation: 1,
+        backgroundColor: "#0F4E4E",
+        borderRadius: 25,
+        paddingVertical: 10,
+        paddingHorizontal: 12,
+        marginTop: 20,
+        textAlign: "center",
+        width: 300
+    },
+
+    primaryCtaText: {
+        textTransform: "uppercase",
+        fontFamily: "Bilo",
+        fontWeight: 400,
+        letterSpacing: 0.4,
+        color: "#FFFF"
+    },
+
     secondaryCta: {
         elevation: 1,
         backgroundColor: "#c7ebe6",
         borderRadius: 25,
         paddingVertical: 10,
         paddingHorizontal: 12,
+        marginTop: 20,
         textAlign: "center",
         width: 300
     },
@@ -47,25 +71,6 @@ export default StyleSheet.create ({
         fontFamily: "Bilo",
         fontWeight: 500,
         color: "#0F4E4E"
-    },
-
-    primaryCta: {
-        elevation: 1,
-        backgroundColor: "#0F4E4E",
-        borderRadius: 25,
-        paddingVertical: 10,
-        paddingHorizontal: 12,
-        marginVertical: 30,
-        textAlign: "center",
-        width: 300
-    },
-
-    primaryCtaText: {
-        textTransform: "uppercase",
-        fontFamily: "Bilo",
-        fontWeight: 400,
-        letterSpacing: 0.2,
-        color: "#FFFF"
     },
 
     logoInline: {
@@ -80,9 +85,9 @@ export default StyleSheet.create ({
         fontFamily: "Bilo",
         fontWeight: 300,
         fontSize: 14,
-        color: "#0F4E4E",
-        paddingVertical: 20,
-        textAlign: "center"
+        color: "#151515",
+        textAlign: "left",
+        paddingTop: 15
     },
 
     itemTextList: {
@@ -90,9 +95,17 @@ export default StyleSheet.create ({
         lineHeight: 18,
         fontWeight: 300,
         fontSize: 14,
-        textAlign: "center",
-        alignSelf: "center",
+        textAlign: "left",
         marginTop: 10,
-        color: "#0F4E4E",
+        color: "#151515",
+    },
+
+    baselineText: {
+        fontFamily: "Bilo",
+        fontWeight: 300,
+        fontSize: 14,
+        color: "#151515",
+        paddingVertical: 0,
+        textAlign: "center"
     }
 });

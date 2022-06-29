@@ -35,7 +35,7 @@ const Install = ({navigation}) => {
             </View>
             
             <View style={{flex: 2}}>
-                <Text style={Style.primaryTitle}>Lançons-nous ! <br></br> Voici ce que vous devez faire avant de commencer :</Text>
+                <Text style={Style.secondaryTitle}>Lançons-nous ! Voici ce que vous devez faire avant de commencer :</Text>
 
                 <FlatList
                     data={DATA}
