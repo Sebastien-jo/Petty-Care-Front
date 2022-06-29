@@ -16,7 +16,7 @@ const Install = ({navigation}) => {
         {
           id: '3',
           title: '3. Sélectionnez le type de communications que vous souhaitez recevoir dans l’application',
-        },
+        }
       ];
 
     const renderItem = ({item}) => (
@@ -29,7 +29,7 @@ const Install = ({navigation}) => {
         <View style={Style.container}>
             
             <View>
-                <Image style={{width: 170, alignSelf: "center"}} source={require("./ImgRad.png")} />
+                <Image style={{width: 170, alignSelf: "center"}} source={require("./ImgRad.png")}/>
 
                 <Image source={require("../assets/Logo_Viridian_Green_Inline.png")} style={Style.logoInline}/>
             </View>
