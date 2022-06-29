@@ -12,7 +12,7 @@ const CGU = ({navigation}) => {
         {
           id: '2',
           title: '2. Nous améliorons constamment nos produits et services, c’est la raison pour laquelle certaines fonctions ou fonctionnalités sont susceptibles d’évoluer au fil du temps.',
-        },
+        }
       ];
 
       const renderItem = ({item}) => (
@@ -49,7 +49,7 @@ const CGU = ({navigation}) => {
                   Acceptez-vous ces conditions d’utilisation ?
               </Text>
 
-              <TouchableOpacity onPress={() => navigation.navigate("Politique de confidentialité")} style={Style.primaryCta}>
+              <TouchableOpacity onPress={() => navigation.navigate("Confidential")} style={Style.primaryCta}>
                   <Text style={Style.primaryCtaText}>J'accepte</Text>
               </TouchableOpacity>
           </View>
