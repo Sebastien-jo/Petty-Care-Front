@@ -1,5 +1,5 @@
-import {View, Text, TouchableOpacity, Image} from 'react-native';
 import React from 'react';
+import {View, Text, TouchableOpacity, Image} from 'react-native';
 import Style from '../Style';
 
 const Confidential = ({navigation}) => {
