@@ -12,7 +12,7 @@ const Home = ({navigation}) => {
             <Text style={Style.primaryTitle}>Bienvenue sur Petty Care !</Text>
 
             <View>
-                <Text style={Style.currentText}>L'application santé de votre animal de compagnie</Text>
+                <Text style={Style.baselineText}>L'application santé de votre animal de compagnie</Text>
               
                 <TouchableOpacity onPress={() => alert("Redirection vers le site e-commerce")} style={Style.secondaryCta}>
                     <Text style={Style.secondaryCtaText}>Découvrez nos produits</Text>

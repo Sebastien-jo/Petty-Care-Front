@@ -7,7 +7,7 @@ const CGU = ({navigation}) => {
     const DATA = [
         {
           id: '1',
-          title: '1.Vous choisissez qui peut voir et contrôler vos produits Petty Care.',
+          title: '1. Vous choisissez qui peut voir et contrôler vos produits Petty Care.',
         },
         {
           id: '2',
@@ -24,11 +24,13 @@ const CGU = ({navigation}) => {
   return (
       <View style={Style.container}>
 
-          <Text style={Style.primaryTitle}>Conditions d’utilisation</Text>
+          <View>
+              <Text style={Style.secondaryTitle}>Conditions d’utilisation</Text>
+
+              <Text style={Style.currentText}>Nos conditions d’utilisation indiquent à quoi vous attendre de notre part et ce que nous attenons de votre part.</Text>
+          </View>
 
           <View>
-              <Text style={Style.currentText}>Nos conditions d’utilisation indiquent à quoi vous attendre de notre part et ce que nous attenons de votre part</Text>
-
               <Text style={Style.currentText}>Nous vous recommandons de lire l’intégralité des informations, mais nous tenons à souligner les deux points suivants :</Text>
 
               <FlatList
@@ -43,7 +45,7 @@ const CGU = ({navigation}) => {
           </View>
 
           <View>
-              <Text style={Style.currentText}>
+              <Text style={Style.baselineText}>
                   Acceptez-vous ces conditions d’utilisation ?
               </Text>
 
@@ -51,6 +53,7 @@ const CGU = ({navigation}) => {
                   <Text style={Style.primaryCtaText}>J'accepte</Text>
               </TouchableOpacity>
           </View>
+
       </View>
   )
 }
