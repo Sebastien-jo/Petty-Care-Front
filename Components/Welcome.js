@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text, Image, TouchableOpacity} from 'react-native';
 import Style from "../Style";
 
-const Welcome = () => {
+const Welcome = ({navigation}) => {
     return (
         <View style={Style.container}>
             <View style={{flexDirection: "row", marginLeft: "85%"}}>
