@@ -10,7 +10,7 @@ const Profile = () => {
     return (
         <View style={Style.container}>
             <View>
-                <Image style={{height: 125, width: 195, marginBottom: 10}} source={require("../assets/Image_Cat_Profile.png")}></Image>
+                <Image style={{height: 125, width: 195, marginBottom: 10}} source={require("../assets/Image_Cat_Profile.png")}/>
                 <Text style={Style.linkText}>Ajouter une photo de profil</Text>
             </View>
 
@@ -27,14 +27,13 @@ const Profile = () => {
 
                 <View>
                     <Text style={Style.currentText}>Poids de l'animal</Text>
-                    <TextInput value={weight} onChangeText={(weight) => setAge(weight)} placeholder='Son poids' style={Style.labelText}/>
+                    <TextInput value={weight} onChangeText={(weight) => setWeight(weight)} placeholder='Son poids' style={Style.labelText}/>
                 </View>
             </View>
 
-            <TouchableOpacity onPress={() => navigation.navigate("")} style={Style.primaryCta}>
+            <TouchableOpacity onPress={() => navigation.navigate("ConnectToy")} style={Style.primaryCta}>
                 <Text style={Style.primaryCtaText}>Valider le profil</Text>
             </TouchableOpacity>
-
         </View>
     )
 }

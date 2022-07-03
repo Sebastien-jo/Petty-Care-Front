@@ -5,13 +5,14 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import Install from "./Components/Install";
-import Home from './Components/Home';
+import Home from "./Components/Home";
 import CGU from "./Components/CGU";
 import Login from "./Components/Login";
 import Confidential from "./Components/Confidential";
-import Welcome from './Components/Welcome';
-import Profile from './Components/Profile';
-import TabNavigator from "./TabNavigator ";
+import Welcome from "./Components/Welcome";
+import Profile from "./Components/Profile";
+import ConnectToy from "./Components/ConnectToy";
+import TabNavigator from './TabNavigator';
 
 const Stack = createStackNavigator();
 
@@ -26,6 +27,7 @@ export default function App() {
                 <Stack.Screen name="Connexion" component={Login}/>
                 <Stack.Screen name="Welcome" component={Welcome}/>
                 <Stack.Screen name="Profile" component={Profile}/>
+                <Stack.Screen name="ConnectToy" component={ConnectToy}/>
                 <Stack.Screen name="Tab" component={TabNavigator} options={{headerShown: false}}/>          
             </Stack.Navigator>
         </NavigationContainer>
