@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {View, Text, Image, TouchableOpacity, TextInput} from 'react-native';
 import Style from "../Style";
 
-const ConnectToy = () => {
+const ConnectActive = () => {
     
     return (
         <View style={Style.container}>
@@ -19,4 +19,4 @@ const ConnectToy = () => {
     )
 }
 
-export default ConnectToy
+export default ConnectActive
