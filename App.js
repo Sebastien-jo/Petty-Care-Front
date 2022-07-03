@@ -9,6 +9,7 @@ import Home from './Components/Home';
 import CGU from "./Components/CGU";
 import Login from "./Components/Login";
 import Confidential from "./Components/Confidential";
+import Welcome from './Components/Welcome';
 import TabNavigator from "./TabNavigator ";
 
 const Stack = createStackNavigator();
@@ -22,6 +23,7 @@ export default function App() {
                 <Stack.Screen name="CGU" component={CGU}/>
                 <Stack.Screen name="Confidential" component={Confidential}/>
                 <Stack.Screen name="Connexion" component={Login}/>
+                <Stack.Screen name="Welcome" component={Welcome}/>
                 <Stack.Screen name="Tab" component={TabNavigator} options={{headerShown: false}}/>          
             </Stack.Navigator>
         </NavigationContainer>
