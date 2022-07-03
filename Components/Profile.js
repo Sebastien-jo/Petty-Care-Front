@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {View, Text, Image, TouchableOpacity, TextInput} from 'react-native';
 import Style from "../Style";
 
-const Profile = () => {
+const Profile = ({navigation}) => {
     const [username, setUsername] = useState("") //input username
     const [age, setAge] = useState("") // input age
     const [weight, setWeight] = useState("") // input poids
