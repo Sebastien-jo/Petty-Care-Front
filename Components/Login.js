@@ -68,7 +68,13 @@ const Login = ({navigation}) => {
             <View style={{marginVertical: 40}}>
                 <Text style={Style.baselineText}>Vous n'avez pas de compte ?</Text>
 
-                <TouchableOpacity onPress={() => alert("Redirection vers le site e-commerce")} style={Style.tertiaryCta}>
+                {/* Redirection définitive : déploiement */}
+                {/* <TouchableOpacity onPress={() => alert("Redirection vers le site e-commerce")} style={Style.tertiaryCta}>
+                    <Text style={Style.tertiaryCtaText}>Découvrez nos produits</Text>
+                </TouchableOpacity> */}
+
+                {/* Redirection provisoire : dév */}
+                <TouchableOpacity onPress={() => navigation.navigate("Welcome")} style={Style.tertiaryCta}>
                     <Text style={Style.tertiaryCtaText}>Découvrez nos produits</Text>
                 </TouchableOpacity>
             </View>
