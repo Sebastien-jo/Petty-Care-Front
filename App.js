@@ -1,16 +1,15 @@
-import {StatusBar} from 'expo-status-bar';
-import {StyleSheet} from 'react-native';
 import 'react-native-gesture-handler';
+import {StatusBar} from 'expo-status-bar';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
-import Install from "./Components/Install"
-import Home from './Components/Home'
-import CGU from "./Components/CGU"
-import Login from "./Components/Login"
-import Confidential from "./Components/Confidential"
-import TabNavigator from "./TabNavigator "
+import Install from "./Components/Install";
+import Home from './Components/Home';
+import CGU from "./Components/CGU";
+import Login from "./Components/Login";
+import Confidential from "./Components/Confidential";
+import TabNavigator from "./TabNavigator ";
 
 const Stack = createStackNavigator();
 
