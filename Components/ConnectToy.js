@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {View, Text, Image, TouchableOpacity, TextInput} from 'react-native';
 import Style from "../Style";
 
-const ConnectToy = () => {
+const ConnectToy = ({navigation}) => {
     const [toy, setToy] = useState("") //input toy
 
     return (
@@ -17,7 +17,7 @@ const ConnectToy = () => {
                 <TextInput value={toy} onChangeText={(toy) => setToy(toy)} placeholder='N° du collier' style={Style.labelText}/>
             </View>
 
-            <TouchableOpacity onPress={() => navigation.navigate("")} style={Style.primaryCta}>
+            <TouchableOpacity onPress={() => navigation.navigate("ConnectActive")} style={Style.primaryCta}>
                 <Text style={Style.primaryCtaText}>Connecter</Text>
             </TouchableOpacity>
 

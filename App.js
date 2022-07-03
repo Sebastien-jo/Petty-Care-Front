@@ -12,6 +12,7 @@ import Confidential from "./Components/Confidential";
 import Welcome from "./Components/Welcome";
 import Profile from "./Components/Profile";
 import ConnectToy from "./Components/ConnectToy";
+import ConnectActive from "./Components/ConnectActive";
 import TabNavigator from './TabNavigator';
 
 const Stack = createStackNavigator();
@@ -28,6 +29,7 @@ export default function App() {
                 <Stack.Screen name="Welcome" component={Welcome}/>
                 <Stack.Screen name="Profile" component={Profile}/>
                 <Stack.Screen name="ConnectToy" component={ConnectToy}/>
+                <Stack.Screen name="ConnectActive" component={ConnectActive}/>
                 <Stack.Screen name="Tab" component={TabNavigator} options={{headerShown: false}}/>          
             </Stack.Navigator>
         </NavigationContainer>
