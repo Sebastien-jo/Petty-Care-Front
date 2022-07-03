@@ -17,7 +17,7 @@ const Welcome = () => {
 
             <Text style={Style.baselineText}>Une fois son profil créé, vous n’aurez plus qu’à configurer son collier.</Text>
 
-            <TouchableOpacity onPress={() => navigation.navigate("Welcome")} style={Style.primaryCta}>
+            <TouchableOpacity onPress={() => navigation.navigate("Profile")} style={Style.primaryCta}>
                 <Text style={Style.primaryCtaText}>Créer un profil</Text>
             </TouchableOpacity>
        </View>
