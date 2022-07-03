@@ -52,7 +52,9 @@ const Login = ({navigation}) => {
                     <Text style={Style.legendCheckbox}>Se souvenir de moi</Text>
                 </View>
 
-                <Text style={Style.linkText}>Mot de passe oublié</Text>
+                <View style={{marginLeft: 40}}>
+                    <Text style={Style.linkText}>Mot de passe oublié</Text>
+                </View>
             </View>
 
             {error ? <Text style={Style.errorText}>Mot de passe ou nom d’utilisateur incorrect</Text> : null}
@@ -66,7 +68,7 @@ const Login = ({navigation}) => {
             <View style={{marginVertical: 40}}>
                 <Text style={Style.baselineText}>Vous n'avez pas de compte ?</Text>
 
-                <TouchableOpacity style={Style.tertiaryCta}>
+                <TouchableOpacity onPress={() => alert("Redirection vers le site e-commerce")} style={Style.tertiaryCta}>
                     <Text style={Style.tertiaryCtaText}>Découvrez nos produits</Text>
                 </TouchableOpacity>
             </View>

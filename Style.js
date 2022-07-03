@@ -171,6 +171,6 @@ export default StyleSheet.create ({
         fontSize: 12,
         color: "#FF6480",
         textAlign : "center",
-        marginVertical: 10
+        marginTop: 10
     }
 });
