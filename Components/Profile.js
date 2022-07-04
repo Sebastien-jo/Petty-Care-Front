@@ -14,7 +14,7 @@ const Profile = ({navigation}) => {
                 <Text style={Style.linkText}>Ajouter une photo de profil</Text>
             </View>
 
-            <View>
+            <View style={{width: "100%"}}>
                 <View>
                     <Text style={Style.currentText}>Prénom de l'animal</Text>
                     <TextInput value={username} onChangeText={(username) => setUsername(username)} placeholder='Son prénom' style={Style.labelText}/>   

@@ -170,7 +170,7 @@ export default StyleSheet.create ({
         marginTop: 10,
         marginBottom: 10,
         textAlign: "left",
-        width: 300
+        width: "100%"
     },
 
     checkbox: {
@@ -189,6 +189,13 @@ export default StyleSheet.create ({
         fontSize: 12,
         color: "#0F4E4E",
         textDecorationLine: "underline"
+    },
+
+    alertLink: {
+        color: "#FF6480",
+        textDecorationLine: "underline",
+        fontSize: 12,
+        paddingTop: 20
     },
 
     errorText: {
@@ -224,5 +231,25 @@ export default StyleSheet.create ({
         borderRadius: 18,
         justifyContent: "center",
         alignItems: "center"
+    },
+
+    parametersText: {
+        fontFamily: "Bilo",
+        fontSize: 14,
+        fontWeight: 400,
+        color: "#0F4E4E"
+    },
+
+    parametersResponse: {
+        fontFamily: "Bilo",
+        fontSize: 14,
+        fontweight: 300,
+        color: "#151515",
+        opacity: "50%"
+    },
+
+    chevrons: {
+        width: 25,
+        height: 25
     }
 });
