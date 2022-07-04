@@ -119,7 +119,16 @@ export default StyleSheet.create ({
         fontFamily: "Bilo",
         fontWeight: 300,
         fontSize: 14,
-        color: "#151515",
+        color: "#0F4E4E",
+        textAlign: "left",
+        paddingTop: 15
+    },
+
+    currentBoldText: {
+        fontFamily: "Bilo",
+        fontWeight: 500,
+        fontSize: 14,
+        color: "#0F4E4E",
         textAlign: "left",
         paddingTop: 15
     },
@@ -131,14 +140,14 @@ export default StyleSheet.create ({
         fontSize: 14,
         textAlign: "left",
         marginTop: 10,
-        color: "#151515",
+        color: "#0F4E4E",
     },
 
     baselineText: {
         fontFamily: "Bilo",
         fontWeight: 300,
         fontSize: 14,
-        color: "#151515",
+        color: "#0F4E4E",
         paddingVertical: 0,
         textAlign: "center"
     },
@@ -187,6 +196,10 @@ export default StyleSheet.create ({
         color: "#FF6480",
         textAlign : "center",
         marginTop: 10
+    },
+
+    card: {
+        marginTop: 25
     },
 
     halfCard: {

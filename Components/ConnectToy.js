@@ -9,7 +9,7 @@ const ConnectToy = ({navigation}) => {
         <View style={Style.container}>
             <View>
                 <Image style={Style.imageCircle} source={require("../assets/Image_Cat_Profile.png")}/>
-                <Text>Non connecté au collier. Vérifiez que le périphérique est allumé et connectez le périphérique par Bluetooth.</Text>
+                <Text style={Style.currentText}>Non connecté au collier. Vérifiez que le périphérique est allumé et connectez le périphérique par Bluetooth.</Text>
             </View>
 
             <View>
