@@ -13,7 +13,8 @@ import Welcome from "./Components/Welcome";
 import Profile from "./Components/Profile";
 import ConnectToy from "./Components/ConnectToy";
 import ConnectActive from "./Components/ConnectActive";
-import Dashboard from "./Components/Dashboard";
+import TabDashboard from "./Components/TabDashboard";
+import TabProfile from "./Components/TabProfile";
 import TabNavigator from './TabNavigator';
 
 const Stack = createStackNavigator();
@@ -31,7 +32,8 @@ export default function App() {
                 <Stack.Screen name="Profile" component={Profile}/>
                 <Stack.Screen name="ConnectToy" component={ConnectToy}/>
                 <Stack.Screen name="ConnectActive" component={ConnectActive}/>
-                <Stack.Screen name="Dashboard" component={Dashboard}/>
+                <Stack.Screen name="TabDashboard" component={TabDashboard}/>
+                <Stack.Screen name="TabProfile" component={TabProfile}/>
                 <Stack.Screen name="Tab" component={TabNavigator} options={{headerShown: false}}/>          
             </Stack.Navigator>
         </NavigationContainer>

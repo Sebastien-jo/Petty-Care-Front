@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {View, Text, Image, TouchableOpacity, TextInput} from 'react-native';
 import Style from "../Style";
 
-const Dashboard = () => {
+const TabDashboard = () => {
     
     return (
         <View style={Style.container}>
@@ -22,8 +22,8 @@ const Dashboard = () => {
                 <Image style={{height: 65, width: 65, borderRadius: 10, marginRight: 15}} source={require("../assets/Image_Profile_User.png")}/>
 
                 <View>
-                    <Text>Bonjour Anna !</Text>
-                    <Text>1 animal</Text>
+                    <Text style={Style.subtitleText}>Bonjour Anna !</Text>
+                    <Text style={Style.legendText}>1 animal</Text>
                 </View>
             </View>
 
@@ -65,4 +65,4 @@ const Dashboard = () => {
     )
 }
 
-export default Dashboard
+export default TabDashboard

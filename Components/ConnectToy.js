@@ -21,7 +21,7 @@ const ConnectToy = ({navigation}) => {
                 <Text style={Style.primaryCtaText}>Connecter</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={() => navigation.navigate("Dashboard")} style={Style.tertiaryCta}>
+            <TouchableOpacity onPress={() => navigation.navigate("TabDashboard")} style={Style.tertiaryCta}>
                 <Text style={Style.tertiaryCtaText}>Connecter plus tard</Text>
             </TouchableOpacity>
         </View>
