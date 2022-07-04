@@ -12,7 +12,8 @@ import Profile from "./Components/Profile";
 import ConnectToy from "./Components/ConnectToy";
 import TabDashboard from "./Screens/TabDashboard";
 import TabProfile from "./Screens/TabProfile";
-import Parameters from "./Components/Parameters";
+import TabAccount from "./Screens/TabAccount";
+import AnimalParameters from "./Components/AnimalParameters";
 
 const Stack = createStackNavigator();
 
@@ -30,7 +31,8 @@ export default function App() {
                 <Stack.Screen name="ConnectToy" component={ConnectToy}/>
                 <Stack.Screen name="TabDashboard" component={TabDashboard}/>
                 <Stack.Screen name="TabProfile" component={TabProfile}/>
-                <Stack.Screen name="Parameters" component={Parameters}/>
+                <Stack.Screen name="TabAccount" component={TabAccount}/>
+                <Stack.Screen name="AnimalParameters" component={AnimalParameters}/>
             </Stack.Navigator>
         </NavigationContainer>
     );

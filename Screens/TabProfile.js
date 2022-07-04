@@ -8,7 +8,7 @@ const TabProfile = ({navigation}) => {
         <View>
             <View style={{width: "100%", height: "220px"}}>
                 <ImageBackground style={{flex: 1}} source={require("../assets/Image_Cat_Profile.png")}>
-                    <TouchableOpacity onPress={() => navigation.navigate("Parameters")} style={{width: "100%", alignItems: "flex-end", padding: 15}}>
+                    <TouchableOpacity onPress={() => navigation.navigate("AnimalParameters")} style={{width: "100%", alignItems: "flex-end", padding: 15}}>
                         <Image style={{width: 16, height: 16}} source={require("../assets/Icon_Parameters.png")}/>
                     </TouchableOpacity>
 
