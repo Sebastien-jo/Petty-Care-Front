@@ -18,7 +18,7 @@ const TabDashboard = ({navigation}) => {
                 </View>
             </View>
 
-            <View style={{flexDirection: "row", width: "100%", justifyContent: "flex-start"}}>
+            <View style={{flexDirection: "row", width: "100%", justifyContent: "flex-start", marginTop: 15}}>
                 <Image style={{height: 65, width: 65, borderRadius: 10, marginRight: 15}} source={require("../assets/Image_Profile_User.png")}/>
 
                 <View>
@@ -62,6 +62,12 @@ const TabDashboard = ({navigation}) => {
                         <View style={{backgroundColor: "#151515", opacity: "10%", borderRadius: 18, height: 20, width: "100%", marginTop: 10}}></View>
                     </View>
                 </View>
+            </View>
+
+            <View style={{marginTop: 30}}>
+                <TouchableOpacity onPress={() => navigation.navigate("")} style={Style.primaryCta}>
+                    <Text style={Style.primaryCtaText}>Ajouter un profil</Text>
+                </TouchableOpacity>
             </View>
 
             {/* Redirection provisoire : dév */}

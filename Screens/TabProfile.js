@@ -80,7 +80,7 @@ const TabProfile = ({navigation}) => {
                         </View>
                     </View>
                 </View>
-
+                
             </View>
 
         </View>
