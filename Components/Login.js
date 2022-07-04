@@ -30,17 +30,17 @@ const Login = ({navigation}) => {
 
             <Text  style={Style.primaryTitle}>Connexion à votre compte</Text>
 
-            <View style={{marginVertical: 15}}>
+            <View style={{marginVertical: 15, width: "100%"}}>
                 <Text style={Style.currentText}>Votre identifiant</Text>
                 <TextInput value={username} onChangeText={(username) => setUsername(username)} placeholder='Identifiant' style={Style.labelText}/>   
             </View>
 
-            <View>
+            <View style={{width: "100%"}}>
                 <Text style={Style.currentText}>Votre mot de passe</Text>
                 <TextInput value={password} onChangeText={(password) => setPassword(password)} secureTextEntry={true} placeholder='Mot de passe' style={Style.labelText}/>
             </View>
 
-            <View style={{flexDirection: "row", justifyContent: "space-between", marginVertical: 10}}>       
+            <View style={{flexDirection: "row", justifyContent: "space-between", width: "100%", marginVertical: 10}}>       
                 <View style={{flexDirection: "row"}}>
                     <Checkbox
                         style={Style.checkbox}
