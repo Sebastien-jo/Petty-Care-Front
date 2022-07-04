@@ -233,6 +233,17 @@ export default StyleSheet.create ({
         alignItems: "center"
     },
 
+    parametersCard: {
+        flexDirection: "column",
+        width: "100%",
+        backgroundColor: "#E2F1EF",
+        padding: 15,
+        margin: 2,
+        marginTop: 8,
+        borderRadius: 18,
+        justifyContent: "space-between",
+    },
+
     parametersText: {
         fontFamily: "Bilo",
         fontSize: 14,
@@ -240,16 +251,8 @@ export default StyleSheet.create ({
         color: "#0F4E4E"
     },
 
-    parametersResponse: {
-        fontFamily: "Bilo",
-        fontSize: 14,
-        fontweight: 300,
-        color: "#151515",
-        opacity: "50%"
-    },
-
     chevrons: {
-        width: 25,
-        height: 25
+        width: 8,
+        height: 8
     }
 });

@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {View, Text, Image, TouchableOpacity, TextInput} from 'react-native';
+import React from 'react';
+import {View, Text, Image, TouchableOpacity} from 'react-native';
 import Style from "../Style";
 
 const TabDashboard = ({navigation}) => {
@@ -67,6 +67,12 @@ const TabDashboard = ({navigation}) => {
             {/* Redirection provisoire : dév */}
             <View>
                 <TouchableOpacity onPress={() => navigation.navigate("TabProfile")} style={Style.tertiaryCta}>
+                    <Text style={Style.tertiaryCtaText}>Accès TabProfile</Text>
+                </TouchableOpacity>
+            </View>
+
+            <View>
+                <TouchableOpacity onPress={() => navigation.navigate("TabAccount")} style={Style.tertiaryCta}>
                     <Text style={Style.tertiaryCtaText}>Accès TabProfile</Text>
                 </TouchableOpacity>
             </View>
