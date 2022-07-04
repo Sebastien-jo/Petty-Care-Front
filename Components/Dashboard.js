@@ -28,19 +28,36 @@ const Dashboard = () => {
             </View>
 
             <View>
-                <Text>Résumé des activités de Cannelle</Text>
+                <Text style={Style.tertiaryTitle}>Résumé des activités de Cannelle</Text>
 
                 <View style={{flexDirection: "row", width: "100%", justifyContent: "space-between"}}>
-                    <View style={{flexDirection: "column", backgroundColor: "#E2F1EF", width: "50%", padding: 20, borderRadius: 18}}>
-                        <Text>15</Text>
-                        <Text>mètres parcourus</Text>
-                        <Text>Aujourd'hui</Text>
+                    <View style={Style.halfCard}>
+                        <View>
+                            <Text style={Style.hightText}>15</Text>
+                            <Text style={Style.subtitleText}>mètres parcourus</Text>
+                        </View>
+
+                        <Text style={Style.currentText}>Aujourd'hui</Text>
                     </View>
 
-                    <View style={{flexDirection: "column", backgroundColor: "#E2F1EF", width: "50%", padding: 20, borderRadius: 18}}>
-                        <Text>05</Text>
-                        <Text>minutes de jeu</Text>
-                        <Text>Aujourd'hui</Text>                  
+                    <View style={Style.halfCard}>
+                        <View>
+                            <Text style={Style.hightText}>05</Text>
+                            <Text style={Style.subtitleText}>minutes de jeu</Text>
+                        </View>
+
+                        <Text style={Style.currentText}>Aujourd'hui</Text>       
+                    </View>
+                </View>
+
+                <View style={{marginTop: 25}}>
+                    <Text style={Style.tertiaryTitle}>Objectif journalier de Cannelle</Text>
+
+                    <View style={Style.wholeCard}>
+                        <Text style={Style.hightText}>30 mètres</Text>
+                        <Text style={Style.currentText}>X % de l’objectif quotidien (1000 mètres)</Text>
+
+                        <View style={{backgroundColor: "#151515", opacity: "10%", borderRadius: 18, height: 20, width: "100%", marginTop: 10}}></View>
                     </View>
                 </View>
             </View>
