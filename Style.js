@@ -99,6 +99,21 @@ export default StyleSheet.create ({
         marginBottom: 30,
         alignSelf: "center"
     },
+
+    hightText: {
+        fontSize: 24,
+        fontWeight: 700,
+        color: "#0F4E4E",
+        textAlign: "center"
+    },
+
+    subtitleText: {
+        fontFamily: "Parisine Plus Std",
+        fontSize: 14,
+        fontWeight: 700,
+        color: "#0F4E4E",
+        textAlign: "center"
+    },
     
     currentText: {
         fontFamily: "Bilo",
@@ -172,5 +187,29 @@ export default StyleSheet.create ({
         color: "#FF6480",
         textAlign : "center",
         marginTop: 10
+    },
+
+    halfCard: {
+        flexDirection: "column", 
+        backgroundColor: "#E2F1EF",
+        width: "48%",
+        padding: 30,
+        margin: 2,
+        marginTop: 8,
+        borderRadius: 18,
+        justifyContent: "space-between",
+        alignItems: "center"
+    },
+
+    wholeCard: {
+        flexDirection: "column",
+        width: "100%",
+        backgroundColor: "#E2F1EF",
+        padding: 30,
+        margin: 2,
+        marginTop: 8,
+        borderRadius: 18,
+        justifyContent: "center",
+        alignItems: "center"
     }
 });
