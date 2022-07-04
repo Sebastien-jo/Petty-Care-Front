@@ -14,6 +14,7 @@ import TabDashboard from "./Screens/TabDashboard";
 import TabProfile from "./Screens/TabProfile";
 import TabAccount from "./Screens/TabAccount";
 import AnimalParameters from "./Components/AnimalParameters";
+import UserParameters from "./Components/UserParameters";
 
 const Stack = createStackNavigator();
 
@@ -33,6 +34,7 @@ export default function App() {
                 <Stack.Screen name="TabProfile" component={TabProfile}/>
                 <Stack.Screen name="TabAccount" component={TabAccount}/>
                 <Stack.Screen name="AnimalParameters" component={AnimalParameters}/>
+                <Stack.Screen name="UserParameters" component={UserParameters}/>
             </Stack.Navigator>
         </NavigationContainer>
     );
