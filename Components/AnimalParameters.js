@@ -4,9 +4,10 @@ import Style from "../Style";
 
 const Parameters = () => {
 
-    const [username , setUsername] = useState("Pellin") //input username
-    const [age, setAge] = useState("12") // input age
-    const [weight, setWeight] = useState("4") // input poids
+    const [username , setUsername] = useState("Cannelle")
+    const [age, setAge] = useState("12")
+    const [weight, setWeight] = useState("4")
+    const [goalWeight, setGoalWeight] = useState("3.5")
     
     return (
         <View style={Style.container}>
@@ -37,6 +38,11 @@ const Parameters = () => {
                     <TextInput value={weight} onChangeText={(weight) => setWeight(weight)} style={Style.labelText}/>
                 </View>
 
+                <View>
+                    <Text style={Style.currentText}>Objectif poids de l'animal</Text>
+                    <TextInput value={goalWeight} onChangeText={(goalWeight) => setGoalWeight(goalWeight)} style={Style.labelText}/>
+                </View>
+
                 <View style={{justifyContent: "center", alignItems: "center"}}>
                     <TouchableOpacity onPress={() => navigation.navigate("")} style={Style.primaryCta}>
                         <Text style={Style.primaryCtaText}>Enregistrer les modifications</Text>
@@ -45,10 +51,6 @@ const Parameters = () => {
             </View>
 
             <View style={{paddingTop: 30, justifyContent: "center", alignItems: "center"}}>
-                <TouchableOpacity onPress={() => navigation.navigate("")} style={Style.tertiaryCta}>
-                    <Text style={Style.tertiaryCtaText}>Réinitialiser le compte</Text>
-                </TouchableOpacity>
-
                 <TouchableOpacity onPress={() => navigation.navigate("")}>
                     <Text style={Style.alertLink}>Supprimer le compte de mon animal</Text>
                 </TouchableOpacity>

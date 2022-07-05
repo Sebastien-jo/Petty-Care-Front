@@ -58,7 +58,7 @@ const Parameters = () => {
 
             <View style={{paddingTop: 30, justifyContent: "center", alignItems: "center"}}>
                 <TouchableOpacity onPress={() => navigation.navigate("")} style={Style.tertiaryCta}>
-                    <Text style={Style.tertiaryCtaText}>Historique de commance</Text>
+                    <Text style={Style.tertiaryCtaText}>Historique de commande</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={() => navigation.navigate("")}>
