@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Text, Image, TouchableOpacity} from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 import Style from "../Style";
 
 const TabDashboard = ({navigation}) => {
@@ -12,13 +13,13 @@ const TabDashboard = ({navigation}) => {
                 </View>
 
                 <View style={{flexDirection: "row"}}>
-                    <Image style={{height: 16, width: 16, marginRight: 15}} source={require("../assets/Icon_Help.png")}/>
+                    <Image style={Style.iconHelp} source={require("../assets/Icon_Help.png")}/>
 
-                    <Image style={{height: 16, width: 16}} source={require("../assets/Icon_Notifications.png")}/>
+                    <Image style={Style.iconNotif} source={require("../assets/Icon_Notifications.png")}/>
                 </View>
             </View>
 
-            <View style={{flexDirection: "row", width: "100%", justifyContent: "flex-start", marginTop: 15}}>
+            <View style={Style.headerDashboard}>
                 <Image style={{height: 65, width: 65, borderRadius: 10, marginRight: 15}} source={require("../assets/Image_Profile_User.png")}/>
 
                 <View>

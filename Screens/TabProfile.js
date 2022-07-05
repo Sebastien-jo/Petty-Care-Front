@@ -6,16 +6,16 @@ const TabProfile = ({navigation}) => {
     
     return (
         <View>
-            <View style={{width: "100%", height: "220px"}}>
+            <View style={Style.headerProfile}>
                 <ImageBackground style={{flex: 1}} source={require("../assets/Image_Cat_Profile.png")}>
                     <TouchableOpacity onPress={() => navigation.navigate("AnimalParameters")} style={{width: "100%", alignItems: "flex-end", padding: 15}}>
-                        <Image style={{width: 16, height: 16}} source={require("../assets/Icon_Parameters.png")}/>
+                        <Image style={Style.iconNotif} source={require("../assets/Icon_Parameters.png")}/>
                     </TouchableOpacity>
 
-                    <View style={{flexDirection: "column", padding: 15, marginTop: 60}}>
-                        <Text style={{color: "#FFFFFF", fontSize: "22px", fontWeight: "500"}}>Cannelle</Text>
-                        <Text style={{color: "#FFFFFF", fontSize: "14px", fontWeight: "500", fontFamily: "Bilo"}}>12 ans</Text>
-                        <Text style={{color: "#FFFFFF", fontSize: "14px", fontWeight: "500", fontFamily: "Bilo", paddingTop: 10}}>Joueuse aguerrie</Text>
+                    <View style={Style.headerAnimal}>
+                        <Text style={Style.headerAnimalTitle}>Cannelle</Text>
+                        <Text style={Style.headerAnimalText}>12 ans</Text>
+                        <Text style={Style.headerAnimalStatut}>Joueuse aguerrie</Text>
                     </View>
                 </ImageBackground>
             </View>
@@ -44,23 +44,23 @@ const TabProfile = ({navigation}) => {
                     </View>
 
                     <View style={Style.card}>
-                        <View style={{flexDirection: "row", width: "100%", justifyContent: "space-between"}}>
+                        <View style={Style.historyCards}>
                             <Text style={Style.tertiaryTitle}>Historique des activités</Text>
                             <Text style={Style.linkText}>Plus</Text>
                         </View>
 
                         <View style={Style.wholeCard}>
-                            <View style={{flexDirection: "row", width: "90%", justifyContent: "space-between"}}>
+                            <View style={Style.historyCards}>
                                 <Text style={Style.currentText}>Hier</Text>
                                 <Text style={Style.currentBoldText}>142 mètres parcourus</Text>
                             </View>
 
-                            <View style={{flexDirection: "row", width: "90%", justifyContent: "space-between"}}>
+                            <View style={Style.historyCards}>
                                 <Text style={Style.currentText}>Avant-hier</Text>
                                 <Text style={Style.currentBoldText}>589 mètres parcourus</Text>
                             </View>
 
-                            <View style={{flexDirection: "row", width: "90%", justifyContent: "space-between"}}>
+                            <View style={Style.historyCards}>
                                 <Text style={Style.currentText}>Sam. 11/06</Text>
                                 <Text style={Style.currentBoldText}>631 mètres parcourus</Text>
                             </View>
@@ -68,7 +68,7 @@ const TabProfile = ({navigation}) => {
                     </View>
 
                     <View style={Style.card}>
-                        <View style={{flexDirection: "row", width: "100%", justifyContent: "space-between"}}>
+                        <View style={Style.historyCards}>
                             <Text style={Style.tertiaryTitle}>Données corporelles</Text>
 
                             <Text style={Style.linkText}>Plus</Text>

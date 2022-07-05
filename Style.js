@@ -10,7 +10,12 @@ export default StyleSheet.create ({
         backgroundColor: "#FFFFFF",
         alignItems: "center",
         justifyContent: "space-between",
-        flexDirection: "column" 
+        flexDirection: "column",
+    },
+
+    tapbar: {
+        activeTintColor: "#151515",
+        fontSize: 12
     },
 
     primaryTitle: {
@@ -267,6 +272,12 @@ export default StyleSheet.create ({
         justifyContent: "space-between",
     },
 
+    parametersTab: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        paddingVertical: 15
+    },
+
     parametersText: {
         fontFamily: "Bilo",
         fontSize: 14,
@@ -277,5 +288,61 @@ export default StyleSheet.create ({
     chevrons: {
         width: 8,
         height: 8
+    },
+
+    headerDashboard: {
+        flexDirection: "row",
+        width: "100%",
+        justifyContent: "flex-start",
+        marginTop: 15
+    },
+
+    headerProfile: {
+        width: "100%",
+        height: "220px"
+    },
+
+    headerAnimal: {
+        flexDirection: "column",
+        padding: 15,
+        marginTop: 60
+    },
+
+    headerAnimalTitle: {
+        color: "#FFFFFF",
+        fontSize: "22px",
+        fontWeight: "500"
+    },
+
+    headerAnimalText: {
+        color: "#FFFFFF",
+        fontSize: "14px",
+        fontWeight: "500",
+        fontFamily: "Bilo"
+    },
+
+    headerAnimalStatut: {
+        color: "#FFFFFF",
+        fontSize: "14px",
+        fontWeight: "500",
+        fontFamily: "Bilo",
+        paddingTop: 10
+    },
+
+    historyCards: {
+        flexDirection: "row",
+        width: "100%",
+        justifyContent: "space-between"
+    },
+
+    iconHelp: {
+        height: 16,
+        width: 16,
+        marginRight: 15
+    },
+
+    iconNotif: {
+        height: 16,
+        width: 16
     }
 });

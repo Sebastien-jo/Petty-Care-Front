@@ -34,12 +34,13 @@ export default function App() {
                 <Stack.Screen name="Profile" component={Profile}/>
                 <Stack.Screen name="ConnectToy" component={ConnectToy}/>
                 <Stack.Screen name="ConnectActive" component={ConnectActive}/>
-                <Stack.Screen name="TabPlay" component={TabPlay}/>
+
+                <Stack.Screen name="TabPlay" component={TabNavigator} options={{headerShown:false}}/>
                 <Stack.Screen name="TabDashboard" component={TabNavigator} options={{headerShown:false}}/>
-                <Stack.Screen name="TabProfile" component={TabProfile}/>
-                <Stack.Screen name="TabAccount" component={TabAccount}/>
-                <Stack.Screen name="AnimalParameters" component={AnimalParameters}/>
-                <Stack.Screen name="UserParameters" component={UserParameters}/>
+                <Stack.Screen name="TabProfile" component={TabNavigator} options={{headerShown:false}}/>
+                <Stack.Screen name="TabAccount" component={TabNavigator} options={{headerShown:false}}/>
+                <Stack.Screen name="AnimalParameters" component={TabNavigator} options={{headerShown:false}}/>
+                <Stack.Screen name="UserParameters" component={TabNavigator} options={{headerShown:false}}/>
             </Stack.Navigator>
         </NavigationContainer>
     );
