@@ -3,7 +3,7 @@ import {View, Text, Image, TouchableOpacity, TextInput} from 'react-native';
 import Style from "../Style";
 
 const ConnectToy = ({navigation}) => {
-    const [toy, setToy] = useState("") //input toy
+    const [toy, setToy] = useState("")
 
     return (
         <View style={Style.container}>

@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
-import {View, Text, Image, TouchableOpacity, TextInput} from 'react-native';
+import React from 'react';
+import {View, Text, Image, TouchableOpacity} from 'react-native';
 import Style from "../Style";
 
-const ConnectActive = () => {
+const ConnectActive = ({navigation}) => {
     
     return (
         <View style={Style.container}>
@@ -12,7 +12,7 @@ const ConnectActive = () => {
 
             <Text style={Style.baselineText}>Tout est prêt. Vous pouvez dès à présent jouer avec votre animal.</Text>
 
-            <TouchableOpacity onPress={() => navigation.navigate("")} style={Style.primaryCta}>
+            <TouchableOpacity onPress={() => navigation.navigate("TabPlay")} style={Style.primaryCta}>
                 <Text style={Style.primaryCtaText}>Jouer</Text>
             </TouchableOpacity>
         </View>

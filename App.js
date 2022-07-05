@@ -10,6 +10,8 @@ import Confidential from "./Components/Confidential";
 import Welcome from "./Components/Welcome";
 import Profile from "./Components/Profile";
 import ConnectToy from "./Components/ConnectToy";
+import ConnectActive from "./Components/ConnectActive";
+import TabPlay from "./Screens/TabPlay";
 import TabDashboard from "./Screens/TabDashboard";
 import TabProfile from "./Screens/TabProfile";
 import TabAccount from "./Screens/TabAccount";
@@ -30,6 +32,8 @@ export default function App() {
                 <Stack.Screen name="Welcome" component={Welcome}/>
                 <Stack.Screen name="Profile" component={Profile}/>
                 <Stack.Screen name="ConnectToy" component={ConnectToy}/>
+                <Stack.Screen name="ConnectActive" component={ConnectActive}/>
+                <Stack.Screen name="TabPlay" component={TabPlay}/>
                 <Stack.Screen name="TabDashboard" component={TabDashboard}/>
                 <Stack.Screen name="TabProfile" component={TabProfile}/>
                 <Stack.Screen name="TabAccount" component={TabAccount}/>
