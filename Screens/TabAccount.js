@@ -11,9 +11,9 @@ const TabAccount = ({navigation}) => {
                 </View>
 
                 <View style={{flexDirection: "row"}}>
-                    <Image style={{height: 16, width: 16, marginRight: 15}} source={require("../assets/Icon_Help.png")}/>
+                    <Image style={Style.iconHelp} source={require("../assets/Icon_Help.png")}/>
 
-                    <Image style={{height: 16, width: 16}} source={require("../assets/Icon_Notifications.png")}/>
+                    <Image style={Style.iconNotif} source={require("../assets/Icon_Notifications.png")}/>
                 </View>
             </View>
 
@@ -25,7 +25,7 @@ const TabAccount = ({navigation}) => {
                         <View style={{flexDirection: "row", justifyContent: "space-between", paddingVertical: 15}}>
                             <Text style={Style.parametersText}>Modifier mon profil</Text>
 
-                            <TouchableOpacity  onPress={() => navigation.navigate("UserParameters")}>
+                            <TouchableOpacity onPress={() => navigation.navigate("UserParameters")}>
                                 <Image style={Style.chevrons} source={require("../assets/Icon_Chevron.png")}/>
                             </TouchableOpacity>
                         </View>
@@ -36,17 +36,17 @@ const TabAccount = ({navigation}) => {
                     <Text style={Style.tertiaryTitle}>Support / Aide</Text>
 
                     <View style={Style.parametersCard}>
-                        <View style={{flexDirection: "row", justifyContent: "space-between", paddingVertical: 15}}>
+                        <View style={Style.parametersTab}>
                             <Text style={Style.parametersText}>Contacter le support</Text>
                             <Image style={Style.chevrons} source={require("../assets/Icon_Chevron.png")}/>
                         </View>
 
-                        <View style={{flexDirection: "row", justifyContent: "space-between", paddingVertical: 15}}>
+                        <View style={Style.parametersTab}>
                             <Text style={Style.parametersText}>Politique de confidentialité</Text>
                             <Image style={Style.chevrons} source={require("../assets/Icon_Chevron.png")}/>
                         </View>
 
-                        <View style={{flexDirection: "row", justifyContent: "space-between", paddingVertical: 15}}>
+                        <View style={Style.parametersTab}>
                             <Text style={Style.parametersText}>Conditions Générales d'utilisation</Text>
                             <Image style={Style.chevrons} source={require("../assets/Icon_Chevron.png")}/>
                         </View>
