@@ -4,11 +4,15 @@ import Style from "../Style";
 
 const Parameters = () => {
 
-    const [lastname, setLastname] = useState("Pellin")
-    const [firstname, setFirstname] = useState("Anne")
-    const [datebirth, setDatebirth] = useState("13/07/1985")
-    const [email, setEmail] = useState("anne.pellin@gmail.com")
-    const [address, setAddress] = useState("3 rue du mail 75002 Paris")
+    const [lastname, setLastname] = useState("Pellin");
+    const [firstname, setFirstname] = useState("Anne");
+    const [datebirth, setDatebirth] = useState("13/07/1985");
+    const [email, setEmail] = useState("anne.pellin@gmail.com");
+    const [address, setAddress] = useState("3 rue du mail 75002 Paris");
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+    }
     
     return (
         <View style={Style.container}>
@@ -50,7 +54,7 @@ const Parameters = () => {
                 </View>
 
                 <View style={{justifyContent: "center", alignItems: "center"}}>
-                    <TouchableOpacity onPress={() => navigation.navigate("")} style={Style.primaryCta}>
+                    <TouchableOpacity onPress={handleSubmit} style={Style.primaryCta}>
                         <Text style={Style.primaryCtaText}>Enregistrer les modifications</Text>
                     </TouchableOpacity>
                 </View>          
