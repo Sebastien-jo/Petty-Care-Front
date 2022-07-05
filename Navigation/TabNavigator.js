@@ -6,17 +6,19 @@ import TabProfile from "../Screens/TabProfile";
 
 const Tab = createBottomTabNavigator();
 
-const TabNavigator = () => {
+const TabNavigator = (props) => {
     return (
+        <>
         <Tab.Navigator>
-            <Tab.Screen options={{headerTitle: 'Journal', headerShown: true}} name="Journal" component={TabDashboard} style={styles.contentTab}/>
+            <Tab.Screen options={{headerTitle: 'Journal', headerShown: false}} name="Journal" component={TabDashboard}/>
 
-            <Tab.Screen options={{headerTitle: 'Profil', headerShown: true}} name="Profile" component={TabProfile} style={styles.contentTab}/>
+            <Tab.Screen options={{headerTitle: 'Profil', headerShown: false}} name="Profile" component={TabProfile}/>
 
-            <Tab.Screen options={{headerTitle: 'Jouer', headerShown: true}} name="Profile" component={TabProfile} style={styles.contentTab}/>
+            <Tab.Screen options={{headerTitle: 'Jouer', headerShown: false}} name="Profile2" component={TabProfile}/>
 
-            <Tab.Screen options={{headerTitle: 'Compte', headerShown: true}} name="Profile" component={TabProfile} style={styles.contentTab}/>
+            <Tab.Screen options={{headerTitle: 'Compte', headerShown: false}} name="Profile3" component={TabProfile}/>
         </Tab.Navigator>
+    </>
     )
 }
 

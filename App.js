@@ -17,6 +17,7 @@ import TabProfile from "./Screens/TabProfile";
 import TabAccount from "./Screens/TabAccount";
 import AnimalParameters from "./Components/AnimalParameters";
 import UserParameters from "./Components/UserParameters";
+import TabNavigator from './Navigation/TabNavigator';
 
 const Stack = createStackNavigator();
 
@@ -34,7 +35,7 @@ export default function App() {
                 <Stack.Screen name="ConnectToy" component={ConnectToy}/>
                 <Stack.Screen name="ConnectActive" component={ConnectActive}/>
                 <Stack.Screen name="TabPlay" component={TabPlay}/>
-                <Stack.Screen name="TabDashboard" component={TabDashboard}/>
+                <Stack.Screen name="TabDashboard" component={TabNavigator} options={{headerShown:false}}/>
                 <Stack.Screen name="TabProfile" component={TabProfile}/>
                 <Stack.Screen name="TabAccount" component={TabAccount}/>
                 <Stack.Screen name="AnimalParameters" component={AnimalParameters}/>
