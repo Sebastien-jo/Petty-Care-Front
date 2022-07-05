@@ -4,13 +4,13 @@ import Style from "../Style";
 import Checkbox from 'expo-checkbox';
 
 const Login = ({navigation}) => {
-    const [isChecked, setChecked] = useState(false); //checkbox
+    const [isChecked, setChecked] = useState(false);
 
-    const [username , setUsername] = useState("") //input username
+    const [username , setUsername] = useState("");
 
-    const [password , setPassword] = useState("") // input password
+    const [password , setPassword] = useState("");
 
-    const [error , setError] = useState(false)
+    const [error , setError] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault()

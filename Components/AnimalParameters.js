@@ -4,10 +4,14 @@ import Style from "../Style";
 
 const Parameters = () => {
 
-    const [username , setUsername] = useState("Cannelle")
-    const [age, setAge] = useState("12")
-    const [weight, setWeight] = useState("4")
-    const [goalWeight, setGoalWeight] = useState("3.5")
+    const [username , setUsername] = useState("Cannelle");
+    const [age, setAge] = useState("12");
+    const [weight, setWeight] = useState("4");
+    const [goalWeight, setGoalWeight] = useState("3.5");
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+    }
     
     return (
         <View style={Style.container}>
@@ -44,7 +48,7 @@ const Parameters = () => {
                 </View>
 
                 <View style={{justifyContent: "center", alignItems: "center"}}>
-                    <TouchableOpacity onPress={() => navigation.navigate("")} style={Style.primaryCta}>
+                    <TouchableOpacity onPress={handleSubmit} style={Style.primaryCta}>
                         <Text style={Style.primaryCtaText}>Enregistrer les modifications</Text>
                     </TouchableOpacity>
                 </View>          

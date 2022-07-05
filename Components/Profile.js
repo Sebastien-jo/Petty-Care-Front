@@ -3,10 +3,22 @@ import {View, Text, Image, TouchableOpacity, TextInput} from 'react-native';
 import Style from "../Style";
 
 const Profile = ({navigation}) => {
-    const [username, setUsername] = useState("")
-    const [datebirth, setDatebirth] = useState("")
-    const [weight, setWeight] = useState("")
-    const [goalWeight, setGoalWeight] = useState("")
+    const [username, setUsername] = useState("");
+    const [datebirth, setDatebirth] = useState("");
+    const [weight, setWeight] = useState("");
+    const [goalWeight, setGoalWeight] = useState("");
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+
+        if(username == false){
+          setError(true)
+          return;
+        }
+        setError(false)
+        alert("ok")
+        navigation.navigate("")
+    }
 
     return (
         <View style={Style.container}>
@@ -41,6 +53,16 @@ const Profile = ({navigation}) => {
                 </View>
             </View>
 
+            {/* Redirection définitive : déploiement */}
+            {/*
+            {error ? <Text style={Style.errorText}>Les champs avec * sont obligatoires</Text> : null}
+
+            <TouchableOpacity onPress={handleSubmit} style={Style.primaryCta}>
+                <Text style={Style.primaryCtaText}>Valider le profil</Text>
+            </TouchableOpacity>
+            */}
+
+            {/* Redirection dév : provisoire */}
             <TouchableOpacity onPress={() => navigation.navigate("ConnectToy")} style={Style.primaryCta}>
                 <Text style={Style.primaryCtaText}>Valider le profil</Text>
             </TouchableOpacity>
