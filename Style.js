@@ -92,6 +92,19 @@ export default StyleSheet.create ({
         color: "#742942"
     },
 
+    submitCenter: {
+        width: "100%",
+        paddingTop: 20,
+        justifyContent: "center",
+        alignItems: "center"
+    },
+
+    optionActions: {
+        paddingTop: 30,
+        justifyContent: "center",
+        alignItems: "center"
+    },
+
     logoInline: {
         width: 150,
         height: 35,
@@ -231,6 +244,16 @@ export default StyleSheet.create ({
         borderRadius: 18,
         justifyContent: "center",
         alignItems: "center"
+    },
+
+    headerParameters: {
+        width: "100%",
+        paddingTop: 20
+    },
+
+    blockParameters: {
+        width: "100%",
+        paddingTop: 20
     },
 
     parametersCard: {

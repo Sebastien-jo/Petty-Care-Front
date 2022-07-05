@@ -20,12 +20,12 @@ const Parameters = () => {
                 <Text style={Style.secondaryTitle}>Profil</Text>
             </View>
 
-            <View style={{width: "100%", paddingTop: 20}}>
+            <View style={Style.headerParameters}>
                 <Text style={Style.tertiaryTitle}>Modifier mon profil</Text>
                 <Image style={{width: "100%", height: 220, borderRadius: 18, marginTop: 10}} source={require("../assets/Image_Profile_User.png")}/>
             </View>
 
-            <View style={{width: "100%", paddingVertical: 20}}>
+            <View style={Style.blockParameters}>
                 <Text style={Style.tertiaryTitle}>Mes informations personnelles</Text>
 
                 <View>
@@ -53,14 +53,14 @@ const Parameters = () => {
                     <TextInput value={address} onChangeText={(address) => setAddress(address)} style={Style.labelText}/>
                 </View>
 
-                <View style={{justifyContent: "center", alignItems: "center"}}>
+                <View style={Style.submitCenter}>
                     <TouchableOpacity onPress={handleSubmit} style={Style.primaryCta}>
                         <Text style={Style.primaryCtaText}>Enregistrer les modifications</Text>
                     </TouchableOpacity>
                 </View>          
             </View>
 
-            <View style={{paddingTop: 30, justifyContent: "center", alignItems: "center"}}>
+            <View style={Style.optionActions}>
                 <TouchableOpacity onPress={() => navigation.navigate("")} style={Style.tertiaryCta}>
                     <Text style={Style.tertiaryCtaText}>Historique de commande</Text>
                 </TouchableOpacity>

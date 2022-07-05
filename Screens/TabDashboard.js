@@ -3,7 +3,7 @@ import {View, Text, Image, TouchableOpacity} from 'react-native';
 import Style from "../Style";
 
 const TabDashboard = ({navigation}) => {
-    
+
     return (
         <View style={Style.container}>
             <View style={{flexDirection: "row", width: "100%", justifyContent: "space-between"}}>
