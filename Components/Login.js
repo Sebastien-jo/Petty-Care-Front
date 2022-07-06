@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {View, Text, Image, TextInput, TouchableOpacity} from 'react-native';
+import {View, Text, Image, TextInput, TouchableOpacity, ScrollView} from 'react-native';
 import Style from "../Style";
 import Checkbox from 'expo-checkbox';
 
@@ -25,59 +25,65 @@ const Login = ({navigation}) => {
     }
 
     return (
-        <View style={Style.container}>
-            <Image source={require("../assets/Logo_Viridian_Green_Inline.png")} style={Style.logoInline}/>
+        <View style={Style.containerNavigator}>
 
-            <Text  style={Style.primaryTitle}>Connexion à votre compte</Text>
+            <ScrollView style={Style.scrollview}>
+                <Image source={require("../assets/Logo_Viridian_Green_Inline.png")} style={Style.logoInline}/>
 
-            <View style={{marginVertical: 15, width: "100%"}}>
-                <Text style={Style.currentText}>Votre identifiant</Text>
-                <TextInput value={username} onChangeText={(username) => setUsername(username)} placeholder='Identifiant' style={Style.labelText}/>   
-            </View>
+                <Text  style={Style.primaryTitle}>Connexion à votre compte</Text>
 
-            <View style={{width: "100%"}}>
-                <Text style={Style.currentText}>Votre mot de passe</Text>
-                <TextInput value={password} onChangeText={(password) => setPassword(password)} secureTextEntry={true} placeholder='Mot de passe' style={Style.labelText}/>
-            </View>
-
-            <View style={{flexDirection: "row", justifyContent: "space-between", width: "100%", marginVertical: 10}}>       
-                <View style={{flexDirection: "row"}}>
-                    <Checkbox
-                        style={Style.checkbox}
-                        value={isChecked}
-                        onValueChange={setChecked}
-                        color={isChecked ? '#0F4E4E' : undefined}
-                    />
-
-                    <Text style={Style.legendCheckbox}>Se souvenir de moi</Text>
+                <View style={{marginVertical: 15, width: "100%"}}>
+                    <Text style={Style.currentText}>Votre identifiant</Text>
+                    <TextInput value={username} onChangeText={(username) => setUsername(username)} placeholder='Identifiant' style={Style.labelText}/>   
                 </View>
 
-                <View style={{marginLeft: 40}}>
-                    <Text style={Style.linkText}>Mot de passe oublié</Text>
+                <View style={{width: "100%"}}>
+                    <Text style={Style.currentText}>Votre mot de passe</Text>
+                    <TextInput value={password} onChangeText={(password) => setPassword(password)} secureTextEntry={true} placeholder='Mot de passe' style={Style.labelText}/>
                 </View>
-            </View>
 
-            {error ? <Text style={Style.errorText}>Mot de passe ou nom d’utilisateur incorrect</Text> : null}
+                <View style={{flexDirection: "row", justifyContent: "space-between", width: "100%", marginVertical: 10}}>       
+                    <View style={{flexDirection: "row"}}>
+                        <Checkbox
+                            style={Style.checkbox}
+                            value={isChecked}
+                            onValueChange={setChecked}
+                            color={isChecked ? '#0F4E4E' : undefined}
+                        />
 
-            <View style={{marginVertical: 10}}>
-                <TouchableOpacity onPress={handleSubmit} style={Style.primaryCta}>
-                    <Text style={Style.primaryCtaText}>Se connecter</Text>
-                </TouchableOpacity>
-            </View>
+                        <Text style={Style.legendCheckbox}>Se souvenir de moi</Text>
+                    </View>
 
-            <View style={{marginVertical: 40}}>
-                <Text style={Style.baselineText}>Vous n'avez pas de compte ?</Text>
+                    <View style={{marginLeft: 40}}>
+                        <Text style={Style.linkText}>Mot de passe oublié</Text>
+                    </View>
+                </View>
 
-                {/* Redirection définitive : déploiement */}
-                {/* <TouchableOpacity onPress={() => alert("Redirection vers le site e-commerce")} style={Style.tertiaryCta}>
-                    <Text style={Style.tertiaryCtaText}>Découvrez nos produits</Text>
-                </TouchableOpacity> */}
+                {error ? <Text style={Style.errorText}>Mot de passe ou nom d’utilisateur incorrect</Text> : null}
 
-                {/* Redirection provisoire : dév */}
-                <TouchableOpacity onPress={() => navigation.navigate("Welcome")} style={Style.tertiaryCta}>
-                    <Text style={Style.tertiaryCtaText}>Découvrez nos produits</Text>
-                </TouchableOpacity>
-            </View>
+                <View style={Style.containerView}>
+                    <TouchableOpacity onPress={handleSubmit} style={Style.primaryCta}>
+                        <Text style={Style.primaryCtaText}>Se connecter</Text>
+                    </TouchableOpacity>
+                </View>
+
+                <View style={{marginVertical: 40}}>
+                    <Text style={Style.baselineText}>Vous n'avez pas de compte ?</Text>
+
+                    {/* Redirection définitive : déploiement */}
+                    {/* <TouchableOpacity onPress={() => alert("Redirection vers le site e-commerce")} style={Style.tertiaryCta}>
+                        <Text style={Style.tertiaryCtaText}>Découvrez nos produits</Text>
+                    </TouchableOpacity> */}
+
+                    {/* Redirection provisoire : dév */}
+                    <View style={Style.containerView}>
+                        <TouchableOpacity onPress={() => navigation.navigate("Welcome")} style={Style.tertiaryCta}>
+                            <Text style={Style.tertiaryCtaText}>Découvrez nos produits</Text>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+            </ScrollView>
+
         </View>
     )
 }

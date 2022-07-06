@@ -29,8 +29,6 @@ const TabProfile = ({navigation}) => {
                         <View style={Style.wholeCard}>
                             <Text style={Style.hightText}>30 mètres</Text>
                             <Text style={Style.currentText}>X % de l’objectif quotidien (1000 mètres)</Text>
-
-                            <View style={{backgroundColor: "#151515", opacity: "10%", borderRadius: 18, height: 20, width: "100%", marginTop: 10}}></View>
                         </View>
                     </View>
 

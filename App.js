@@ -25,7 +25,7 @@ export default function App() {
     return (
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen name="Home" component={Home}/>
+                <Stack.Screen name="Home" component={Home} options={{headerShown:false}}/>
                 <Stack.Screen name="Install" component={Install}/>
                 <Stack.Screen name="CGU" component={CGU}/>
                 <Stack.Screen name="Confidential" component={Confidential}/>

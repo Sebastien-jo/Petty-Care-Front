@@ -8,7 +8,7 @@ const TabDashboard = ({navigation}) => {
     return (
         <View style={Style.containerNavigator}>
             <ScrollView style={Style.scrollview}>
-                <View style={{flexDirection: "row", width: "100%", justifyContent: "space-between"}}>
+                <View style={{paddingTop: 20, flexDirection: "row", width: "100%", justifyContent: "space-between"}}>
                     <View>
                         <Text style={Style.secondaryTitle}>Journal</Text>
                     </View>
@@ -25,7 +25,7 @@ const TabDashboard = ({navigation}) => {
 
                     <View>
                         <Text style={Style.subtitleText}>Bonjour Anna !</Text>
-                        <Text style={Style.legendText}>1 animal</Text>
+                        <Text style={Style.currentText}>1 animal</Text>
                     </View>
                 </View>
 
@@ -60,13 +60,11 @@ const TabDashboard = ({navigation}) => {
                         <View style={Style.wholeCard}>
                             <Text style={Style.hightText}>30 mètres</Text>
                             <Text style={Style.currentText}>X % de l’objectif quotidien (1000 mètres)</Text>
-
-                            <View style={{backgroundColor: "#151515", opacity: "10%", borderRadius: 18, height: 20, width: "100%", marginTop: 10}}></View>
                         </View>
                     </View>
                 </View>
 
-                <View style={{marginTop: 30}}>
+                <View style={Style.containerView}>
                     <TouchableOpacity onPress={() => navigation.navigate("")} style={Style.primaryCta}>
                         <Text style={Style.primaryCtaText}>Ajouter un profil</Text>
                     </TouchableOpacity>

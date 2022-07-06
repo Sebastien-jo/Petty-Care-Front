@@ -11,7 +11,7 @@ const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
     return (
-        <Tab.Navigator style={Style.tapbar}>          
+        <Tab.Navigator>          
             <Tab.Screen options={{headerTitle: "Journal", headerShown: false}} name="Journal" component={TabDashboard}/>
             <Tab.Screen options={{headerTitle: "Profil", headerShown: false}} name="Profil" component={TabProfile}/>
             <Tab.Screen options={{headerTitle: "Jouer", headerShown: false}} name="Jouer" component={TabPlay}/>
