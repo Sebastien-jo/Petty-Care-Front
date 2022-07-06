@@ -1,26 +1,26 @@
-import React, {useState} from 'react';
-import {View, Text, Image, ImageBackground, TouchableOpacity} from 'react-native';
+import React from 'react';
+import {View, Text, Image, ImageBackground, TouchableOpacity, ScrollView} from 'react-native';
 import Style from "../Style";
 
 const TabProfile = ({navigation}) => {
     
     return (
-        <View>
-            <View style={Style.headerProfile}>
-                <ImageBackground style={{flex: 1}} source={require("../assets/Image_Cat_Profile.png")}>
-                    <TouchableOpacity onPress={() => navigation.navigate("AnimalParameters")} style={{width: "100%", alignItems: "flex-end", padding: 15}}>
-                        <Image style={Style.iconNotif} source={require("../assets/Icon_Parameters.png")}/>
-                    </TouchableOpacity>
+        <View style={Style.containerNavigator}>
+            <ScrollView style={Style.scrollview}>
 
-                    <View style={Style.headerAnimal}>
-                        <Text style={Style.headerAnimalTitle}>Cannelle</Text>
-                        <Text style={Style.headerAnimalText}>12 ans</Text>
-                        <Text style={Style.headerAnimalStatut}>Joueuse aguerrie</Text>
-                    </View>
-                </ImageBackground>
-            </View>
+                <View style={Style.headerProfile}>
+                    <ImageBackground style={{flex: 1}} source={require("../assets/Image_Cat_Profile.png")}>
+                        <TouchableOpacity onPress={() => navigation.navigate("AnimalParameters")} style={{width: "100%", alignItems: "flex-end", padding: 15}}>
+                            <Image style={Style.iconNotif} source={require("../assets/Icon_Parameters.png")}/>
+                        </TouchableOpacity>
 
-            <View style={Style.container}>
+                        <View style={Style.headerAnimal}>
+                            <Text style={Style.headerAnimalTitle}>Cannelle</Text>
+                            <Text style={Style.headerAnimalText}>12 ans</Text>
+                            <Text style={Style.headerAnimalStatut}>Joueuse aguerrie</Text>
+                        </View>
+                    </ImageBackground>
+                </View>
 
                 <View style={{flexDirection: "column", width: "100%"}}>
                     <View style={Style.card}>
@@ -80,10 +80,9 @@ const TabProfile = ({navigation}) => {
                         </View>
                     </View>
                 </View>
-                
-            </View>
-
-        </View>
+            
+            </ScrollView>
+        </View> 
     )
 }
 
