@@ -13,12 +13,9 @@ export default Logo
 
 const styles = StyleSheet.create({
     image : {
-        shadowColor: "#000000",
-        marginVertical : 20,
+        marginTop: 60,
         width : 250,
         height : 145,
-        alignSelf : "center",
-        shadowOpacity:  0.17,
-        shadowRadius: 3.05
+        alignSelf : "center"
     }
 })

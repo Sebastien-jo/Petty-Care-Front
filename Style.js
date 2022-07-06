@@ -21,7 +21,7 @@ export default StyleSheet.create ({
         backgroundColor: "#FFFFFF",
         alignItems: "center",
         justifyContent: "space-between",
-        flexDirection: "column"
+        flexDirection: "column",
     },
 
     scrollview: {
@@ -31,31 +31,29 @@ export default StyleSheet.create ({
         paddingBottom: 40
     },
 
-    tapbar: {
-        activeTintColor: "#151515",
-        fontSize: 12
+    containerView: {
+        justifyContent: "center",
+        alignItems: "center",
     },
 
     primaryTitle: {
-        fontFamily: "Parisine Plus Std",
         fontSize: 22,
-        fontWeight: 700,
+        fontWeight: "bold",
         color: "#0F4E4E",
         textAlign: "center"
     },
 
     secondaryTitle: {
-        fontFamily: "Parisine Plus Std",
+        fontWeight: "bold",
         fontSize: 20,
-        fontWeight: 700,
         color: "#0F4E4E",
         textAlign: "left"
     },
 
     tertiaryTitle: {
-        fontFamily: "Parisine Plus Std",
+        fontFamily: "Parisine",
+        fontWeight: "bold",
         fontSize: 16,
-        fontWeight: 600,
         color: "#0F4E4E"
     },
 
@@ -66,14 +64,14 @@ export default StyleSheet.create ({
         paddingVertical: 10,
         paddingHorizontal: 12,
         marginTop: 20,
-        textAlign: "center",
+        marginBottom: 15,
+        alignItems: "center",
         width: 300
     },
 
     primaryCtaText: {
         textTransform: "uppercase",
-        fontFamily: "Bilo",
-        fontWeight: 400,
+        fontWeight: "bold",
         letterSpacing: 0.4,
         color: "#FFFFFF"
     },
@@ -85,14 +83,13 @@ export default StyleSheet.create ({
         paddingVertical: 10,
         paddingHorizontal: 12,
         marginTop: 20,
-        textAlign: "center",
+        alignItems: "center",
         width: 300
     },
 
     secondaryCtaText: {
         textTransform: "uppercase",
-        fontFamily: "Bilo",
-        fontWeight: 500,
+        fontWeight: "bold",
         color: "#0F4E4E"
     },
 
@@ -100,18 +97,18 @@ export default StyleSheet.create ({
         elevation: 1,
         backgroundColor: "#FFFF",
         borderRadius: 25,
-        border: "1px solid #742942",
+        borderWidth: 1,
+        borderColor: "#742942",
         paddingVertical: 10,
         paddingHorizontal: 12,
         marginTop: 10,
-        textAlign: "center",
+        alignItems: "center",
         width: 300
     },
 
     tertiaryCtaText: {
         textTransform: "uppercase",
-        fontFamily: "Bilo",
-        fontWeight: 500,
+        fontWeight: "bold",
         color: "#742942"
     },
 
@@ -137,23 +134,21 @@ export default StyleSheet.create ({
     },
 
     hightText: {
+        fontWeight: "bold",
         fontSize: 24,
-        fontWeight: 700,
         color: "#0F4E4E",
         textAlign: "center"
     },
 
     subtitleText: {
-        fontFamily: "Parisine Plus Std",
+        fontWeight: "bold",
         fontSize: 14,
-        fontWeight: 700,
         color: "#0F4E4E",
         textAlign: "center"
     },
     
     currentText: {
-        fontFamily: "Bilo",
-        fontWeight: 300,
+        fontWeight: "normal",
         fontSize: 14,
         color: "#0F4E4E",
         textAlign: "left",
@@ -161,27 +156,15 @@ export default StyleSheet.create ({
     },
 
     currentBoldText: {
-        fontFamily: "Bilo",
-        fontWeight: 500,
+        fontWeight: "bold",
         fontSize: 14,
         color: "#0F4E4E",
         textAlign: "left",
         paddingTop: 15
     },
 
-    itemTextList: {
-        fontFamily: "Bilo",
-        lineHeight: 18,
-        fontWeight: 300,
-        fontSize: 14,
-        textAlign: "left",
-        marginTop: 10,
-        color: "#0F4E4E",
-    },
-
     baselineText: {
-        fontFamily: "Bilo",
-        fontWeight: 300,
+        fontWeight: "normal",
         fontSize: 14,
         color: "#0F4E4E",
         paddingVertical: 0,
@@ -193,20 +176,21 @@ export default StyleSheet.create ({
         alignSelf: "center",
         width: 160,
         height: 160,
-        margin: 20
+        margin: 15
     },
 
     labelText: {
         fontSize : 14,
         backgroundColor: "#FFFFFF",
-        border: "1px solid #0F4E4E",
+        borderWidth: 1,
+        borderColor: "#0F4E4E",
         borderRadius: 25,
         paddingVertical: 10,
         paddingHorizontal: 12,
         marginTop: 10,
         marginBottom: 10,
         textAlign: "left",
-        width: "100%"
+        maxWidth: "100%"
     },
 
     checkbox: {
@@ -297,9 +281,7 @@ export default StyleSheet.create ({
     },
 
     parametersText: {
-        fontFamily: "Bilo",
         fontSize: 14,
-        fontWeight: 400,
         color: "#0F4E4E"
     },
 
@@ -329,21 +311,19 @@ export default StyleSheet.create ({
     headerAnimalTitle: {
         color: "#FFFFFF",
         fontSize: "22px",
-        fontWeight: "500"
+        fontWeight: "bold"
     },
 
     headerAnimalText: {
         color: "#FFFFFF",
         fontSize: "14px",
-        fontWeight: "500",
-        fontFamily: "Bilo"
+        fontWeight: "bold",
     },
 
     headerAnimalStatut: {
         color: "#FFFFFF",
         fontSize: "14px",
-        fontWeight: "500",
-        fontFamily: "Bilo",
+        fontWeight: "bold",
         paddingTop: 10
     },
 

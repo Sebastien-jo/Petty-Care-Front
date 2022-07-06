@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import {Text, View, TouchableOpacity} from 'react-native';
 import Style from '../Style.js';
 import Logo from './Logo.js';
 
@@ -11,7 +11,7 @@ const Home = ({navigation}) => {
 
             <Text style={Style.primaryTitle}>Bienvenue sur Petty Care !</Text>
 
-            <View>
+            <View style={Style.containerView}>
                 <Text style={Style.baselineText}>L'application santé de votre animal de compagnie</Text>
               
                 <TouchableOpacity onPress={() => alert("Redirection vers le site e-commerce")} style={Style.secondaryCta}>

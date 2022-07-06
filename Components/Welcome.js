@@ -5,12 +5,6 @@ import Style from "../Style";
 const Welcome = ({navigation}) => {
     return (
         <View style={Style.container}>
-            <View style={{flexDirection: "row", marginLeft: "85%"}}>
-                <Image style={{height: 16, width: 16, marginRight: 15}} source={require("../assets/Icon_Help.png")}/>
-
-                <Image style={{height: 16, width: 16}} source={require("../assets/Icon_Notifications.png")}/>
-            </View>
-
             <Image style={Style.imageCircle} source={require("../assets/Image_Cat_Welcome.png")}/>
 
             <Text style={Style.primaryTitle}>Créer le profil de votre animal pour pouvoir jouer avec lui !</Text>

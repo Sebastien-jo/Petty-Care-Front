@@ -1,6 +1,5 @@
 import React from 'react';
-import {View, Text, Image, TouchableOpacity} from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
+import {View, Text, Image, TouchableOpacity, ScrollView} from 'react-native';
 import Style from "../Style";
 
 const TabAccount = ({navigation}) => {
@@ -8,7 +7,7 @@ const TabAccount = ({navigation}) => {
         <View style={Style.containerNavigator}>
 
             <ScrollView style={Style.scrollview}>   
-                <View style={{flexDirection: "row", width: "100%", justifyContent: "space-between"}}>
+                <View style={{paddingTop: 20, flexDirection: "row", width: "100%", justifyContent: "space-between"}}>
                     <View>
                         <Text style={Style.secondaryTitle}>Compte</Text>
                     </View>
@@ -57,7 +56,7 @@ const TabAccount = ({navigation}) => {
                     </View>
                 </View>
 
-                <View>
+                <View style={Style.containerView}>
                     <TouchableOpacity onPress={() => navigation.navigate("")} style={Style.tertiaryCta}>
                         <Text style={Style.tertiaryCtaText}>Se déconnecter</Text>
                     </TouchableOpacity>
