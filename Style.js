@@ -10,7 +10,25 @@ export default StyleSheet.create ({
         backgroundColor: "#FFFFFF",
         alignItems: "center",
         justifyContent: "space-between",
-        flexDirection: "column",
+        flexDirection: "column"
+    },
+
+    containerNavigator: {
+        flex: 1,
+        height: "100%",
+        paddingLeft: 20,
+        paddingRight: 20,
+        backgroundColor: "#FFFFFF",
+        alignItems: "center",
+        justifyContent: "space-between",
+        flexDirection: "column"
+    },
+
+    scrollview: {
+        flex: 1,
+        width: "100%",
+        paddingTop: 20,
+        paddingBottom: 40
     },
 
     tapbar: {

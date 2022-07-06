@@ -5,7 +5,7 @@ import Style from "../Style";
 const TabPlay = ({navigation}) => {
 
     return (
-        <View style={{backgroundColor: "#FFFFFF", height: "100%"}}>
+        <View style={Style.containerNavigator}>
             <View style={{width: "100%", height: "220px"}}>
                 <ImageBackground style={{flex: 1}} source={require("../assets/Image_Cat_Profile.png")}>
                     <View style={{flexDirection: "column", padding: 15, marginTop: 60}}>
