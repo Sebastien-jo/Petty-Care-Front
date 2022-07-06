@@ -1,5 +1,6 @@
 import React from 'react';
-import {View, Text, Image, ImageBackground, TouchableOpacity, ScrollView} from 'react-native';
+import {View, Text, ImageBackground, TouchableOpacity, ScrollView} from 'react-native';
+import Ionicons from "react-native-vector-icons/Ionicons";
 import Style from "../Style";
 
 const TabProfile = ({navigation}) => {
@@ -11,7 +12,7 @@ const TabProfile = ({navigation}) => {
                 <View style={Style.headerProfile}>
                     <ImageBackground style={{flex: 1}} source={require("../assets/Image_Cat_Profile.png")}>
                         <TouchableOpacity onPress={() => navigation.navigate("AnimalParameters")} style={{width: "100%", alignItems: "flex-end", padding: 15}}>
-                            <Image style={Style.iconNotif} source={require("../assets/Icon_Parameters.png")}/>
+                            <Ionicons name="settings" size={20} color="#FFFFFF"/>
                         </TouchableOpacity>
 
                         <View style={Style.headerAnimal}>

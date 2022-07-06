@@ -120,6 +120,7 @@ export default StyleSheet.create ({
 
     optionActions: {
         paddingTop: 30,
+        paddingBottom: 40,
         justifyContent: "center",
         alignItems: "center"
     },

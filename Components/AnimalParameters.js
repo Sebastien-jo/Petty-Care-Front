@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, Image, TouchableOpacity, TextInput} from 'react-native';
+import {View, Text, Image, TouchableOpacity, TextInput, ScrollView} from 'react-native';
 import Style from "../Style";
 
 const Parameters = () => {
@@ -14,51 +14,53 @@ const Parameters = () => {
     }
     
     return (
-        <View style={Style.container}>
-            <View>
-                <Text style={Style.secondaryTitle}>Profil</Text>
-            </View>
-
-            <View style={Style.headerParameters}>
-                <Text style={Style.tertiaryTitle}>Modifier le profil de Cannelle</Text>
-                <Image style={{width: "100%", height: 220, borderRadius: 18, marginTop: 10}} source={require("../assets/Image_Cat_Profile.png")}/>
-            </View>
-
-            <View style={Style.blockParameters}>
-                <Text style={Style.tertiaryTitle}>Informations de Cannelle</Text>
-
+        <View style={Style.containerNavigator}>
+            <ScrollView style={Style.scrollview}>
                 <View>
-                    <Text style={Style.currentText}>Prénom</Text>
-                    <TextInput value={username} onChangeText={(username) => setUsername(username)} style={Style.labelText}/>   
-                </View>                
-
-                <View>
-                    <Text style={Style.currentText}>Âge de l'animal</Text>
-                    <TextInput value={age} onChangeText={(age) => setAge(age)} style={Style.labelText}/>
+                    <Text style={Style.secondaryTitle}>Profil</Text>
                 </View>
 
-                <View>
-                    <Text style={Style.currentText}>Poids de l'animal</Text>
-                    <TextInput value={weight} onChangeText={(weight) => setWeight(weight)} style={Style.labelText}/>
+                <View style={Style.headerParameters}>
+                    <Text style={Style.tertiaryTitle}>Modifier le profil de Cannelle</Text>
+                    <Image style={{width: "100%", height: 220, borderRadius: 18, marginTop: 10}} source={require("../assets/Image_Cat_Profile.png")}/>
                 </View>
 
-                <View>
-                    <Text style={Style.currentText}>Objectif poids de l'animal</Text>
-                    <TextInput value={goalWeight} onChangeText={(goalWeight) => setGoalWeight(goalWeight)} style={Style.labelText}/>
+                <View style={Style.blockParameters}>
+                    <Text style={Style.tertiaryTitle}>Informations de Cannelle</Text>
+
+                    <View>
+                        <Text style={Style.currentText}>Prénom</Text>
+                        <TextInput value={username} onChangeText={(username) => setUsername(username)} style={Style.labelText}/>   
+                    </View>                
+
+                    <View>
+                        <Text style={Style.currentText}>Âge de l'animal</Text>
+                        <TextInput value={age} onChangeText={(age) => setAge(age)} style={Style.labelText}/>
+                    </View>
+
+                    <View>
+                        <Text style={Style.currentText}>Poids de l'animal</Text>
+                        <TextInput value={weight} onChangeText={(weight) => setWeight(weight)} style={Style.labelText}/>
+                    </View>
+
+                    <View>
+                        <Text style={Style.currentText}>Objectif poids de l'animal</Text>
+                        <TextInput value={goalWeight} onChangeText={(goalWeight) => setGoalWeight(goalWeight)} style={Style.labelText}/>
+                    </View>
+
+                    <View style={Style.submitCenter}>
+                        <TouchableOpacity onPress={handleSubmit} style={Style.primaryCta}>
+                            <Text style={Style.primaryCtaText}>Enregistrer les modifications</Text>
+                        </TouchableOpacity>
+                    </View>          
                 </View>
 
-                <View style={Style.submitCenter}>
-                    <TouchableOpacity onPress={handleSubmit} style={Style.primaryCta}>
-                        <Text style={Style.primaryCtaText}>Enregistrer les modifications</Text>
+                <View style={Style.optionActions}>
+                    <TouchableOpacity onPress={() => navigation.navigate("")}>
+                        <Text style={Style.alertLink}>Supprimer le compte de mon animal</Text>
                     </TouchableOpacity>
-                </View>          
-            </View>
-
-            <View style={Style.optionActions}>
-                <TouchableOpacity onPress={() => navigation.navigate("")}>
-                    <Text style={Style.alertLink}>Supprimer le compte de mon animal</Text>
-                </TouchableOpacity>
-            </View>
+                </View>
+            </ScrollView>
         </View>
     )
 }

@@ -11,10 +11,6 @@ import Welcome from "./Components/Welcome";
 import Profile from "./Components/Profile";
 import ConnectToy from "./Components/ConnectToy";
 import ConnectActive from "./Components/ConnectActive";
-import TabPlay from "./Screens/TabPlay";
-import TabDashboard from "./Screens/TabDashboard";
-import TabProfile from "./Screens/TabProfile";
-import TabAccount from "./Screens/TabAccount";
 import AnimalParameters from "./Components/AnimalParameters";
 import UserParameters from "./Components/UserParameters";
 import TabNavigator from './Navigation/TabNavigator';
@@ -25,7 +21,7 @@ export default function App() {
     return (
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen name="Home" component={Home} options={{headerShown:false}}/>
+                <Stack.Screen name="Home" component={Home} options={{headerShown: false}}/>
                 <Stack.Screen name="Install" component={Install}/>
                 <Stack.Screen name="CGU" component={CGU}/>
                 <Stack.Screen name="Confidential" component={Confidential}/>
@@ -34,13 +30,13 @@ export default function App() {
                 <Stack.Screen name="Profile" component={Profile}/>
                 <Stack.Screen name="ConnectToy" component={ConnectToy}/>
                 <Stack.Screen name="ConnectActive" component={ConnectActive}/>
+                <Stack.Screen name="AnimalParameters" component={AnimalParameters}/>
+                <Stack.Screen name="UserParameters" component={UserParameters}/>
 
-                <Stack.Screen name="TabPlay" component={TabNavigator} options={{headerShown:false}}/>
-                <Stack.Screen name="TabDashboard" component={TabNavigator} options={{headerShown:false}}/>
-                <Stack.Screen name="TabProfile" component={TabNavigator} options={{headerShown:false}}/>
-                <Stack.Screen name="TabAccount" component={TabNavigator} options={{headerShown:false}}/>
-                <Stack.Screen name="AnimalParameters" component={TabNavigator} options={{headerShown:false}}/>
-                <Stack.Screen name="UserParameters" component={TabNavigator} options={{headerShown:false}}/>
+                <Stack.Screen name="TabPlay" component={TabNavigator} options={{headerShown: false}}/>
+                <Stack.Screen name="TabDashboard" component={TabNavigator} options={{headerShown: false}}/>
+                <Stack.Screen name="TabProfile" component={TabNavigator} options={{headerShown: false}}/>
+                <Stack.Screen name="TabAccount" component={TabNavigator} options={{headerShown: false}}/>
             </Stack.Navigator>
         </NavigationContainer>
     );
