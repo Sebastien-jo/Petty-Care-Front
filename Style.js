@@ -51,7 +51,6 @@ export default StyleSheet.create ({
     },
 
     tertiaryTitle: {
-        fontFamily: "Parisine",
         fontWeight: "bold",
         fontSize: 16,
         color: "#0F4E4E"
@@ -101,7 +100,7 @@ export default StyleSheet.create ({
         borderColor: "#742942",
         paddingVertical: 10,
         paddingHorizontal: 12,
-        marginTop: 10,
+        marginTop: 20,
         alignItems: "center",
         width: 300
     },
@@ -299,7 +298,7 @@ export default StyleSheet.create ({
 
     headerProfile: {
         width: "100%",
-        height: "220px"
+        height: 220
     },
 
     headerAnimal: {
@@ -310,19 +309,19 @@ export default StyleSheet.create ({
 
     headerAnimalTitle: {
         color: "#FFFFFF",
-        fontSize: "22px",
+        fontSize: 22,
         fontWeight: "bold"
     },
 
     headerAnimalText: {
         color: "#FFFFFF",
-        fontSize: "14px",
+        fontSize: 14,
         fontWeight: "bold",
     },
 
     headerAnimalStatut: {
         color: "#FFFFFF",
-        fontSize: "14px",
+        fontSize: 14,
         fontWeight: "bold",
         paddingTop: 10
     },
