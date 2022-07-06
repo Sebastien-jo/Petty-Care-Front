@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Text, Image, TouchableOpacity, ScrollView} from 'react-native';
+import Ionicons from "react-native-vector-icons/Ionicons";
 import Style from "../Style";
 
 const TabAccount = ({navigation}) => {
@@ -24,11 +25,19 @@ const TabAccount = ({navigation}) => {
                         <Text style={Style.tertiaryTitle}>Mon compte</Text>
                     
                         <View style={Style.parametersCard}>
-                            <View style={{flexDirection: "row", justifyContent: "space-between", paddingVertical: 15}}>
+                            <View style={Style.parametersTab}>
                                 <Text style={Style.parametersText}>Modifier mon profil</Text>
 
                                 <TouchableOpacity onPress={() => navigation.navigate("UserParameters")}>
-                                    <Image style={Style.chevrons} source={require("../assets/Icon_Chevron.png")}/>
+                                    <Ionicons name="arrow-forward" size={16} color="#0F4E4E"/>
+                                </TouchableOpacity>
+                            </View>
+
+                            <View style={Style.parametersTab}>
+                                <Text style={Style.parametersText}>Modifier mon mot de passe</Text>
+
+                                <TouchableOpacity onPress={() => navigation.navigate("")}>
+                                    <Ionicons name="arrow-forward" size={16} color="#0F4E4E"/>
                                 </TouchableOpacity>
                             </View>
                         </View>
@@ -40,17 +49,17 @@ const TabAccount = ({navigation}) => {
                         <View style={Style.parametersCard}>
                             <View style={Style.parametersTab}>
                                 <Text style={Style.parametersText}>Contacter le support</Text>
-                                <Image style={Style.chevrons} source={require("../assets/Icon_Chevron.png")}/>
+                                <Ionicons name="arrow-forward" size={16} color="#0F4E4E"/>
                             </View>
 
                             <View style={Style.parametersTab}>
                                 <Text style={Style.parametersText}>Politique de confidentialité</Text>
-                                <Image style={Style.chevrons} source={require("../assets/Icon_Chevron.png")}/>
+                                <Ionicons name="arrow-forward" size={16} color="#0F4E4E"/>
                             </View>
 
                             <View style={Style.parametersTab}>
                                 <Text style={Style.parametersText}>Conditions Générales d'utilisation</Text>
-                                <Image style={Style.chevrons} source={require("../assets/Icon_Chevron.png")}/>
+                                <Ionicons name="arrow-forward" size={16} color="#0F4E4E"/>
                             </View>
                         </View>
                     </View>
