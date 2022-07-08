@@ -1,28 +1,56 @@
 import React, {useState} from "react";
-import {View, Text, Image, TextInput, TouchableOpacity, ScrollView} from 'react-native';
-import Style from "../Style";
+import {View, Text, Image, TouchableOpacity, ScrollView} from 'react-native';
 import Checkbox from 'expo-checkbox';
+import Style from "../Style";
+import {useForm} from "react-hook-form";
+import LoginInput from "./LoginInput";
 
 const Login = ({navigation}) => {
+    
+    const {control, handleSubmit, formState: {errors}} = useForm({
+        defaultValues: {
+            username: "",
+            password: ""
+        }
+    });
+
+    console.log(errors);
+
+    const [errorUser, setErrorUser] = useState(false);
+
+    const onSignIn = data => {
+        console.log(data);
+        // e.preventDefault()
+
+        fetch("https://localhost:8000/api",
+            {
+            method: "POST",
+            mode: "cors",
+            body: JSON.stringify(data)
+            }
+        )
+        .then(response => response.json())
+        .then(data => {
+            return data;
+        }).catch((error) => {
+            console.error(error);
+        });
+   
+        
+        // if (!username || !password){
+            // setErrorUser(true)
+            // return;
+        // }
+        // setErrorUser(false)
+        // navigation.navigate("");
+    }
+
+    const onForgotPassword = () => {
+        // des choses
+    }
+
     const [isChecked, setChecked] = useState(false);
 
-    const [username , setUsername] = useState("");
-
-    const [password , setPassword] = useState("");
-
-    const [error , setError] = useState(false);
-
-    const handleSubmit = (e) => {
-        e.preventDefault()
-
-        if(!username || !password){
-          setError(true)
-          return;
-        }
-        setError(false)
-        alert("ok")
-        navigation.navigate("Tab")
-    }
 
     return (
         <View style={Style.containerNavigator}>
@@ -30,44 +58,52 @@ const Login = ({navigation}) => {
             <ScrollView style={Style.scrollview}>
                 <Image source={require("../assets/Logo_Viridian_Green_Inline.png")} style={Style.logoInline}/>
 
-                <Text  style={Style.primaryTitle}>Connexion à votre compte</Text>
+                <Text style={Style.primaryTitle}>Connexion à votre compte</Text>
 
-                <View style={{marginVertical: 15, width: "100%"}}>
+                <View style={{marginVertical: 15}}>
                     <Text style={Style.currentText}>Votre identifiant</Text>
-                    <TextInput value={username} onChangeText={(username) => setUsername(username)} placeholder='Identifiant' style={Style.labelText}/>   
-                </View>
-
-                <View style={{width: "100%"}}>
+                    <LoginInput
+                        name="username"
+                        placeholder="Identifiant"
+                        control={control}
+                        rules={{required: "Veuillez renseigner un identifiant valide"}}
+                    />
+   
                     <Text style={Style.currentText}>Votre mot de passe</Text>
-                    <TextInput value={password} onChangeText={(password) => setPassword(password)} secureTextEntry={true} placeholder='Mot de passe' style={Style.labelText}/>
-                </View>
+                    <LoginInput
+                        name="password"
+                        placeholder="Mot de passe"
+                        control={control}
+                        rules={{required: "Veuillez renseigner un mot de passe valide"}}
+                    />
 
-                <View style={{flexDirection: "row", justifyContent: "space-between", width: "100%", marginVertical: 10}}>       
-                    <View style={{flexDirection: "row"}}>
-                        <Checkbox
-                            style={Style.checkbox}
-                            value={isChecked}
-                            onValueChange={setChecked}
-                            color={isChecked ? '#0F4E4E' : undefined}
-                        />
+                    <View style={{flexDirection: "row", justifyContent: "space-between", width: "100%", marginVertical: 10}}>       
+                        <View style={{flexDirection: "row"}}>
+                            <Checkbox
+                                style={Style.checkbox}
+                                value={isChecked}
+                                onValueChange={setChecked}
+                                color={isChecked ? '#0F4E4E' : undefined}
+                            />
 
-                        <Text style={Style.legendCheckbox}>Se souvenir de moi</Text>
+                            <Text style={Style.legendCheckbox}>Se souvenir de moi</Text>
+                        </View>
+
+                        <View style={{marginLeft: 40}}>
+                            <Text style={Style.linkText}>Mot de passe oublié</Text>
+                        </View>
                     </View>
-
-                    <View style={{marginLeft: 40}}>
-                        <Text style={Style.linkText}>Mot de passe oublié</Text>
-                    </View>
                 </View>
-
-                {error ? <Text style={Style.errorText}>Mot de passe ou nom d’utilisateur incorrect</Text> : null}
 
                 <View style={Style.containerView}>
-                    <TouchableOpacity onPress={handleSubmit} style={Style.primaryCta}>
+                    <TouchableOpacity onPress={handleSubmit(onSignIn)} style={Style.primaryCta}>
                         <Text style={Style.primaryCtaText}>Se connecter</Text>
                     </TouchableOpacity>
                 </View>
+                
+                {/* {errorUser ? <Text style={Style.errorText}>Mot de passe ou nom d’utilisateur incorrect</Text> : null} */}
 
-                <View style={{marginVertical: 40}}>
+                <View style={{marginVertical: 30}}>
                     <Text style={Style.baselineText}>Vous n'avez pas de compte ?</Text>
 
                     {/* Redirection définitive : déploiement */}

@@ -221,8 +221,7 @@ export default StyleSheet.create ({
     errorText: {
         fontSize: 12,
         color: "#FF6480",
-        textAlign : "center",
-        marginTop: 10
+        textAlign : "left"
     },
 
     card: {
