@@ -22,19 +22,20 @@ const Login = ({navigation}) => {
         console.log(data);
         // e.preventDefault()
 
-        fetch("https://localhost:8000/api",
+        fetch("https://localhost:8000/api/login",
             {
-            method: "POST",
-            mode: "cors",
-            body: JSON.stringify(data)
+                method: "POST",
+                body: JSON.stringify(data),
+                headers: {
+                    "Content-Type": "application/json",
+                }
             }
         )
         .then(response => response.json())
-        .then(data => {
-            return data;
-        }).catch((error) => {
-            console.error(error);
-        });
+            .then(data => console.log(data)
+            ).catch((error) => {
+                console.error(error);
+            });
    
         
         // if (!username || !password){
