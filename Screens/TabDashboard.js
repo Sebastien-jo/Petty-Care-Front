@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {View, Text, Image, TouchableOpacity} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
+import {UserProfileContext} from "../Context/UserProfileContext";
 import Style from "../Style";
 
 const TabDashboard = ({navigation}) => {
+
+    const user = useContext(UserProfileContext);
 
     return (
         <View style={Style.containerNavigator}>
@@ -24,7 +27,7 @@ const TabDashboard = ({navigation}) => {
                     <Image style={{height: 65, width: 65, borderRadius: 10, marginRight: 15}} source={require("../assets/Image_Profile_User.png")}/>
 
                     <View>
-                        <Text style={Style.subtitleText}>Bonjour Anna !</Text>
+                        <Text style={Style.subtitleText}>Bonjour {user.firstname}</Text>
                         <Text style={Style.currentText}>1 animal</Text>
                     </View>
                 </View>

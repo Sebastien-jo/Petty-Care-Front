@@ -1,9 +1,10 @@
 import React, {useState} from "react";
 import {View, Text, Image, TouchableOpacity, ScrollView} from 'react-native';
 import Checkbox from 'expo-checkbox';
-import Style from "../Style";
 import {useForm} from "react-hook-form";
-import LoginInput from "./LoginInput";
+import LoginInput from "../Components/LoginInput";
+import {UserProfileContext} from "../Context/UserProfileContext";
+import Style from "../Style";
 
 const Login = ({navigation}) => {
     
@@ -16,26 +17,26 @@ const Login = ({navigation}) => {
 
     console.log(errors);
 
-    const [errorUser, setErrorUser] = useState(false);
+    // const [errorUser, setErrorUser] = useState(false);
 
-    const onSignIn = data => {
+    const onSignIn = async (data) => {
         console.log(data);
         // e.preventDefault()
 
-        fetch("https://localhost:8000/api/login",
-            {
-                method: "POST",
-                body: JSON.stringify(data),
-                headers: {
-                    "Content-Type": "application/json",
-                }
+        fetch("https://localhost:8000/api/login", {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: {
+                "Content-Type": "application/json",
             }
+        }
         )
         .then(response => response.json())
             .then(data => console.log(data)
             ).catch((error) => {
                 console.error(error);
             });
+
    
         
         // if (!username || !password){
