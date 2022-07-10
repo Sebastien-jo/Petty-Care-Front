@@ -6,7 +6,6 @@ import TabDashboard from "../Screens/TabDashboard";
 import TabProfile from "../Screens/TabProfile";
 import TabPlay from "../Screens/TabPlay";
 import TabAccount from "../Screens/TabAccount";
-import Style from "../Style";
 
 const Tab = createBottomTabNavigator();
 

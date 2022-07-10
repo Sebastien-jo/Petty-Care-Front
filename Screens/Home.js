@@ -1,7 +1,7 @@
 import React from 'react'
 import {Text, View, TouchableOpacity} from 'react-native';
 import Style from '../Style.js';
-import Logo from './Logo.js';
+import Logo from '../Components/Logo';
 
 const Home = ({navigation}) => { 
     return(       
