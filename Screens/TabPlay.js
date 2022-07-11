@@ -1,8 +1,11 @@
-import React from 'react';
-import {View, Text, Image, ImageBackground, TouchableOpacity, ScrollView} from 'react-native';
+import React, {useContext} from 'react';
+import {UserProfileContext} from "../Context/UserProfileContext";
+import {View, Text, ImageBackground, TouchableOpacity, ScrollView} from 'react-native';
 import Style from "../Style";
 
 const TabPlay = ({navigation}) => {
+
+    const {userProfile} = useContext(UserProfileContext);
 
     return (
         <View style={Style.containerNavigator}>
@@ -11,8 +14,8 @@ const TabPlay = ({navigation}) => {
                 <View style={Style.headerProfile}>
                     <ImageBackground style={{flex: 1}} source={require("../assets/Image_Cat_Profile.png")}>
                         <View style={Style.headerAnimal}>
-                            <Text style={Style.headerAnimalTitle}>Cannelle</Text>
-                            <Text style={Style.headerAnimalText}>12 ans</Text>
+                            <Text style={Style.headerAnimalTitle}>{userProfile.name}</Text>
+                            <Text style={Style.headerAnimalText}>{userProfile.age} ans</Text>
                             <Text style={Style.headerAnimalStatut}>Joueuse aguerrie</Text>
                         </View>
                     </ImageBackground>

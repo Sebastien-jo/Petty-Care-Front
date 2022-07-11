@@ -1,6 +1,6 @@
-import React, {useState, useContext} from 'react';
+import React, {useContext} from 'react';
 import {useForm} from "react-hook-form";
-import {View, Text, Image, TouchableOpacity, TextInput} from 'react-native';
+import {View, Text, Image, TouchableOpacity} from 'react-native';
 import FormInput from '../Components/FormInput';
 import {UserProfileContext} from "../Context/UserProfileContext";
 import Style from "../Style";
@@ -12,19 +12,14 @@ const Parameters = () => {
     const {control, handleSubmit, formState: {errors}} = useForm({
         defaultValues: {
             username: "",
-            password: ""
+            firstname: "",
+            lastname: "",
+            address: ""
         }
     });
 
-    // const [lastname, setLastname] = useState("Pellin");
-    // const [firstname, setFirstname] = useState("Anne");
-    // const [datebirth, setDatebirth] = useState("13/07/1985");
-    // const [email, setEmail] = useState("anne.pellin@gmail.com");
-    // const [address, setAddress] = useState("3 rue du mail 75002 Paris");
-
     const onModify = async (data) => {
         console.log(data);
-        // e.preventDefault()
     }
     
     return (

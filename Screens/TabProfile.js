@@ -1,10 +1,13 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {View, Text, ImageBackground, TouchableOpacity, ScrollView} from 'react-native';
 import Ionicons from "react-native-vector-icons/Ionicons";
+import {UserProfileContext} from "../Context/UserProfileContext";
 import Style from "../Style";
 
 const TabProfile = ({navigation}) => {
     
+    const {userProfile} = useContext(UserProfileContext);
+
     return (
         <View style={Style.containerNavigator}>
             <ScrollView style={Style.scrollview}>
@@ -16,8 +19,8 @@ const TabProfile = ({navigation}) => {
                         </TouchableOpacity>
 
                         <View style={Style.headerAnimal}>
-                            <Text style={Style.headerAnimalTitle}>Cannelle</Text>
-                            <Text style={Style.headerAnimalText}>12 ans</Text>
+                            <Text style={Style.headerAnimalTitle}>{userProfile.name}</Text>
+                            <Text style={Style.headerAnimalText}>{userProfile.age} ans</Text>
                             <Text style={Style.headerAnimalStatut}>Joueuse aguerrie</Text>
                         </View>
                     </ImageBackground>
@@ -74,8 +77,8 @@ const TabProfile = ({navigation}) => {
                         </View>
 
                         <View style={Style.wholeCard}>
-                            <Text style={Style.hightText}>4 kg</Text>
-                            <Text style={Style.currentText}>Objectif : 3.5 kg</Text>
+                            <Text style={Style.hightText}>{userProfile.weight} kg</Text>
+                            <Text style={Style.currentText}>Objectif : {userProfile.weightGoal} kg</Text>
                         </View>
                     </View>
                 </View>

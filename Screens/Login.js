@@ -1,9 +1,8 @@
-import React, {useState, useContext} from "react";
+import React, {useState} from "react";
 import {View, Text, Image, TouchableOpacity, ScrollView} from 'react-native';
 import Checkbox from 'expo-checkbox';
 import {useForm} from "react-hook-form";
 import FormInput from "../Components/FormInput";
-import {UserProfileContext} from "../Context/UserProfileContext";
 import Style from "../Style";
 
 const Login = ({navigation}) => {
@@ -21,14 +20,14 @@ const Login = ({navigation}) => {
 
     const onSignIn = async (data) => {
         console.log(data);
-        // e.preventDefault()
 
         fetch("https://localhost:8000/api/login", {
             method: "POST",
             body: JSON.stringify(data),
             headers: {
                 "Content-Type": "application/json",
-            }
+            },
+            redirect: navigation.navigate("Profile")
         }
         )
         .then(response => response.json())
@@ -108,14 +107,8 @@ const Login = ({navigation}) => {
                 <View style={{marginVertical: 30}}>
                     <Text style={Style.baselineText}>Vous n'avez pas de compte ?</Text>
 
-                    {/* Redirection définitive : déploiement */}
-                    {/* <TouchableOpacity onPress={() => alert("Redirection vers le site e-commerce")} style={Style.tertiaryCta}>
-                        <Text style={Style.tertiaryCtaText}>Découvrez nos produits</Text>
-                    </TouchableOpacity> */}
-
-                    {/* Redirection provisoire : dév */}
                     <View style={Style.containerView}>
-                        <TouchableOpacity onPress={() => navigation.navigate("Welcome")} style={Style.tertiaryCta}>
+                        <TouchableOpacity onPress={() => alert("Redirection vers le site e-commerce")} style={Style.tertiaryCta}>
                             <Text style={Style.tertiaryCtaText}>Découvrez nos produits</Text>
                         </TouchableOpacity>
                     </View>

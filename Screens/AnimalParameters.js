@@ -1,16 +1,25 @@
-import React, {useState} from 'react';
-import {View, Text, Image, TouchableOpacity, TextInput, ScrollView} from 'react-native';
+import React, {useContext} from 'react';
+import {View, Text, Image, TouchableOpacity, ScrollView} from 'react-native';
+import {useForm} from "react-hook-form";
+import FormInput from '../Components/FormInput';
+import {UserProfileContext} from "../Context/UserProfileContext";
 import Style from "../Style";
 
 const Parameters = () => {
 
-    const [username , setUsername] = useState("Cannelle");
-    const [age, setAge] = useState("12");
-    const [weight, setWeight] = useState("4");
-    const [goalWeight, setGoalWeight] = useState("3.5");
+    const {userProfile, setUserProfile} = useContext(UserProfileContext);
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
+    const {control, handleSubmit, formState: {errors}} = useForm({
+        defaultValues: {
+            name: "",
+            age: "",
+            weight: "",
+            weightGoal: ""
+        }
+    });
+
+    const onModify = (data) => {
+        console.log(data)
     }
     
     return (
@@ -21,31 +30,51 @@ const Parameters = () => {
                 </View>
 
                 <View style={Style.headerParameters}>
-                    <Text style={Style.tertiaryTitle}>Modifier le profil de Cannelle</Text>
+                    <Text style={Style.tertiaryTitle}>Modifier le profil de {userProfile.name}</Text>
                     <Image style={{width: "100%", height: 220, borderRadius: 18, marginTop: 10}} source={require("../assets/Image_Cat_Profile.png")}/>
                 </View>
 
                 <View style={Style.blockParameters}>
-                    <Text style={Style.tertiaryTitle}>Informations de Cannelle</Text>
+                    <Text style={Style.tertiaryTitle}>Informations de {userProfile.name}</Text>
 
                     <View>
                         <Text style={Style.currentText}>Prénom</Text>
-                        <TextInput value={username} onChangeText={(username) => setUsername(username)} style={Style.labelText}/>   
+                        <FormInput
+                        name="name"
+                        placeholder={userProfile.name}
+                        control={control}
+                        rules={{required: "Veuillez renseigner un nom valide"}}
+                    />  
                     </View>                
 
                     <View>
                         <Text style={Style.currentText}>Âge de l'animal</Text>
-                        <TextInput value={age} onChangeText={(age) => setAge(age)} style={Style.labelText}/>
+                        <FormInput
+                        name="age"
+                        placeholder={userProfile.age}
+                        control={control}
+                        rules={{required: "Veuillez renseigner un nom valide"}}
+                    />
                     </View>
 
                     <View>
                         <Text style={Style.currentText}>Poids de l'animal</Text>
-                        <TextInput value={weight} onChangeText={(weight) => setWeight(weight)} style={Style.labelText}/>
+                        <FormInput
+                        name="weight"
+                        placeholder={userProfile.weight}
+                        control={control}
+                        rules={{required: "Veuillez renseigner un nom valide"}}
+                    />
                     </View>
 
                     <View>
                         <Text style={Style.currentText}>Objectif poids de l'animal</Text>
-                        <TextInput value={goalWeight} onChangeText={(goalWeight) => setGoalWeight(goalWeight)} style={Style.labelText}/>
+                        <FormInput
+                        name="weightGoal"
+                        placeholder={userProfile.weightGoal}
+                        control={control}
+                        rules={{required: "Veuillez renseigner un nom valide"}}
+                    />
                     </View>
 
                     <View style={Style.submitCenter}>
