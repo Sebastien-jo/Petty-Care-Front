@@ -19,14 +19,14 @@ const Profile = ({navigation}) => {
 
     const onSignUp = async(data) => {
         console.log(data);
-        // e.preventDefault()
 
         fetch("https://localhost:8000/api/pets/create", {
             method: "POST",
             body: JSON.stringify(data),
             headers: {
                 "Content-Type": "application/json",
-            }
+            },
+            redirect: navigation.navigate("ConnectToy")
         }
         )
         .then(response => response.json())
@@ -94,12 +94,6 @@ const Profile = ({navigation}) => {
                 <View style={Style.containerView}>
                     <TouchableOpacity onPress={handleSubmit(onSignUp)} style={Style.primaryCta}>
                         <Text style={Style.primaryCtaText}>Valider le profil</Text>
-                    </TouchableOpacity>
-                </View>               
-
-                <View>
-                    <TouchableOpacity onPress={() => navigation.navigate("ConnectToy")} style={Style.tertiaryCta}>
-                        <Text style={Style.tertiaryCtaText}>Poursuivre</Text>
                     </TouchableOpacity>
                 </View>
             </ScrollView>

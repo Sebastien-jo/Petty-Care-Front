@@ -5,7 +5,10 @@ const UserProfileContext = createContext({
     lastname: "",
     username: "",
     address: "",
-    pets:""
+    name:"",
+    age: "",
+    weight: "",
+    weightGoal: ""
 })
 
 const UserProfileContextProvider = ({children}) => {
@@ -14,7 +17,10 @@ const UserProfileContextProvider = ({children}) => {
         lastname: "Pellin",
         username: "anna.pellin@gmail.com",
         address: "7 rue du Mail 75002 Paris",
-        pets:"Cannelle"
+        name:"Cannelle",
+        age: "10",
+        weight: "4",
+        weightGoal: "3"
     }
 
     const [userProfile, setUserProfile] = useState(userProfileInit);
