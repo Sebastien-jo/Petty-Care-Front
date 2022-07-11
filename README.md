@@ -9,8 +9,9 @@
 
 ## How to install project
 - clone this repo `git clone https://github.com/Sebastien-jo/Petty-Care-Front.git`
-- use the command `npm install`
+- use the command `npm install --global expo-cli`
 (*This command will downloads dependencies defined in a package. json file and generates a node_modules folder with the installed modules.*)
+- and the command `npm install react-hook-form`
 
 ## Workflow
 ### Branch naming
