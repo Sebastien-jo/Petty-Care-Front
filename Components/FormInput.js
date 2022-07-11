@@ -3,7 +3,7 @@ import {View, TextInput, Text} from "react-native";
 import {Controller} from "react-hook-form";
 import Style from "../Style";
 
-const LoginInput = ({control, name, rules={}, placeholder, secureTextEntry}) => {
+const FormInput = ({control, name, rules={}, placeholder, secureTextEntry}) => {
     return (
         <View>
             <Controller
@@ -32,4 +32,4 @@ const LoginInput = ({control, name, rules={}, placeholder, secureTextEntry}) => 
     )
 }
 
-export default LoginInput
+export default FormInput

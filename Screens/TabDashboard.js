@@ -1,12 +1,12 @@
-import React, { useContext } from 'react';
+import React, {useContext} from 'react';
 import {View, Text, Image, TouchableOpacity} from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
+import {ScrollView} from 'react-native-gesture-handler';
 import {UserProfileContext} from "../Context/UserProfileContext";
 import Style from "../Style";
 
 const TabDashboard = ({navigation}) => {
 
-    const user = useContext(UserProfileContext);
+    const {userProfile} = useContext(UserProfileContext);
 
     return (
         <View style={Style.containerNavigator}>
@@ -27,14 +27,15 @@ const TabDashboard = ({navigation}) => {
                     <Image style={{height: 65, width: 65, borderRadius: 10, marginRight: 15}} source={require("../assets/Image_Profile_User.png")}/>
 
                     <View>
-                        <Text style={Style.subtitleText}>Bonjour {user.firstname}</Text>
+                        <Text style={Style.subtitleText}>Bonjour {userProfile.firstname}</Text>
+
                         <Text style={Style.currentText}>1 animal</Text>
                     </View>
                 </View>
 
                 <View>
                     <View style={Style.card}>
-                        <Text style={Style.tertiaryTitle}>Résumé des activités de Cannelle</Text>
+                        <Text style={Style.tertiaryTitle}>Résumé des activités de {userProfile.pets}</Text>
 
                         <View style={{flexDirection: "row", width: "100%", justifyContent: "space-between"}}>
                             <View style={Style.halfCard}>
@@ -58,7 +59,7 @@ const TabDashboard = ({navigation}) => {
                     </View>
 
                     <View style={Style.card}>
-                        <Text style={Style.tertiaryTitle}>Objectif journalier de Cannelle</Text>
+                        <Text style={Style.tertiaryTitle}>Objectif journalier de {userProfile.pets}</Text>
 
                         <View style={Style.wholeCard}>
                             <Text style={Style.hightText}>30 mètres</Text>

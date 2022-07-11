@@ -1,4 +1,4 @@
-import 'react-native-gesture-handler';
+import React from "react";
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
@@ -14,22 +14,19 @@ import ConnectActive from "./Screens/ConnectActive";
 import AnimalParameters from "./Screens/AnimalParameters";
 import UserParameters from "./Screens/UserParameters";
 import TabNavigator from "./Navigation/TabNavigator";
-import {UserProfileContext} from "./Context/UserProfileContext";
+import UserProfileContextProvider from "./Context/UserProfileContext";
 
 const Stack = createStackNavigator();
 
 export default function App() {
     return (
-        <NavigationContainer>
-
-            <Stack.Navigator>
-
-                <Stack.Screen name="Home" component={Home} options={{headerShown: false}}/>
-                <Stack.Screen name="Install" component={Install}/>
-                <Stack.Screen name="CGU" component={CGU}/>
-                <Stack.Screen name="Confidential" component={Confidential}/>
-
-                {/* <UserProfileContext.Provider> */}
+        <UserProfileContextProvider>
+            <NavigationContainer>
+                <Stack.Navigator>
+                    <Stack.Screen name="Home" component={Home} options={{headerShown: false}}/>
+                    <Stack.Screen name="Install" component={Install}/>
+                    <Stack.Screen name="CGU" component={CGU}/>
+                    <Stack.Screen name="Confidential" component={Confidential}/>
                     <Stack.Screen name="Welcome" component={Welcome}/>
                     <Stack.Screen name="Profile" component={Profile}/>
                     <Stack.Screen name="ConnectToy" component={ConnectToy}/>
@@ -41,10 +38,9 @@ export default function App() {
                     <Stack.Screen name="TabDashboard" component={TabNavigator} options={{headerShown: false}}/>
                     <Stack.Screen name="TabProfile" component={TabNavigator} options={{headerShown: false}}/>
                     <Stack.Screen name="TabAccount" component={TabNavigator} options={{headerShown: false}}/>
-                {/* </UserProfileContext.Provider>*/}
+                </Stack.Navigator>
+            </NavigationContainer>
 
-            </Stack.Navigator>
-
-        </NavigationContainer>
+        </UserProfileContextProvider>
     );
 }
