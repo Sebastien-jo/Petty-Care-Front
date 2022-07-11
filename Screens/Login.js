@@ -1,8 +1,8 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
 import {View, Text, Image, TouchableOpacity, ScrollView} from 'react-native';
 import Checkbox from 'expo-checkbox';
 import {useForm} from "react-hook-form";
-import LoginInput from "../Components/LoginInput";
+import FormInput from "../Components/FormInput";
 import {UserProfileContext} from "../Context/UserProfileContext";
 import Style from "../Style";
 
@@ -37,7 +37,7 @@ const Login = ({navigation}) => {
                 console.error(error);
             });
 
-   
+        // récupérer le token (id)
         
         // if (!username || !password){
             // setErrorUser(true)
@@ -64,7 +64,7 @@ const Login = ({navigation}) => {
 
                 <View style={{marginVertical: 15}}>
                     <Text style={Style.currentText}>Votre identifiant</Text>
-                    <LoginInput
+                    <FormInput
                         name="username"
                         placeholder="Identifiant"
                         control={control}
@@ -72,7 +72,7 @@ const Login = ({navigation}) => {
                     />
    
                     <Text style={Style.currentText}>Votre mot de passe</Text>
-                    <LoginInput
+                    <FormInput
                         name="password"
                         placeholder="Mot de passe"
                         control={control}

@@ -1,23 +1,39 @@
-import React, {useState} from 'react';
-import {View, Text, Image, TouchableOpacity, TextInput, ScrollView} from 'react-native';
+import React from 'react';
+import {View, Text, Image, TouchableOpacity, ScrollView} from 'react-native';
+import {useForm} from "react-hook-form";
+import FormInput from "../Components/FormInput";
 import Style from "../Style";
 
 const Profile = ({navigation}) => {
-    const [username, setUsername] = useState("");
-    const [datebirth, setDatebirth] = useState("");
-    const [weight, setWeight] = useState("");
-    const [goalWeight, setGoalWeight] = useState("");
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-
-        if(username == false){
-          setError(true)
-          return;
+    const {control, handleSubmit, formState: {errors}} = useForm({
+        defaultValues: {
+            name: "",
+            age: "",
+            weight: "",
+            weightGoal: ""
         }
-        setError(false)
-        alert("ok")
-        navigation.navigate("")
+    });
+
+    console.log(errors);
+
+    const onSignUp = async(data) => {
+        console.log(data);
+        // e.preventDefault()
+
+        fetch("https://localhost:8000/api/pets/create", {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: {
+                "Content-Type": "application/json",
+            }
+        }
+        )
+        .then(response => response.json())
+            .then(data => console.log(data)
+            ).catch((error) => {
+                console.error(error);
+        });
     }
 
     return (
@@ -32,22 +48,42 @@ const Profile = ({navigation}) => {
                 <View style={{width: "100%", paddingTop: 15}}>
                     <View>
                         <Text style={Style.currentText}>Prénom de l'animal*</Text>
-                        <TextInput value={username} onChangeText={(username) => setUsername(username)} placeholder='Son prénom' style={Style.labelText}/>   
+                        <FormInput
+                        name="name"
+                        placeholder="Prénom de l'animal"
+                        control={control}
+                        rules={{required: "Veuillez renseigner le prénom de votre animal"}}
+                        />
                     </View>
 
                     <View>
                         <Text style={Style.currentText}>Date de naissance</Text>
-                        <TextInput value={datebirth} onChangeText={(datebirth) => setDatebirth(datebirth)} placeholder='Sa date de naissance' style={Style.labelText}/>
+                        <FormInput
+                        name="weight"
+                        placeholder="Poids de l'animal"
+                        control={control}
+                        rules={{required: "Veuillez renseigner le poids de votre animal"}}
+                        />
                     </View>
 
                     <View>
                         <Text style={Style.currentText}>Poids de l'animal</Text>
-                        <TextInput value={weight} onChangeText={(weight) => setWeight(weight)} placeholder='Son poids' style={Style.labelText}/>
+                        <FormInput
+                        name="age"
+                        placeholder="Date de naissance de l'animal"
+                        control={control}
+                        rules={{required: "Veuillez renseigner la date de naissance de votre animal"}}
+                        />
                     </View>
 
                     <View>
                         <Text style={Style.currentText}>Poids à atteindre</Text>
-                        <TextInput value={goalWeight} onChangeText={(goalWeight) => setGoalWeight(goalWeight)} placeholder='Son poids idéal' style={Style.labelText}/>
+                        <FormInput
+                        name="weightGoal"
+                        placeholder="Objectif de poids"
+                        control={control}
+                        rules={{required: "Veuillez renseigner un objectif"}}
+                        />
                     </View>
 
                     <View>
@@ -55,19 +91,15 @@ const Profile = ({navigation}) => {
                     </View>
                 </View>
 
-                {/* Redirection définitive : déploiement */}
-                {/*
-                {error ? <Text style={Style.errorText}>Les champs avec * sont obligatoires</Text> : null}
-
-                <TouchableOpacity onPress={handleSubmit} style={Style.primaryCta}>
-                    <Text style={Style.primaryCtaText}>Valider le profil</Text>
-                </TouchableOpacity>
-                */}
-
-                {/* Redirection dév : provisoire */}
                 <View style={Style.containerView}>
-                    <TouchableOpacity onPress={() => navigation.navigate("ConnectToy")} style={Style.primaryCta}>
+                    <TouchableOpacity onPress={handleSubmit(onSignUp)} style={Style.primaryCta}>
                         <Text style={Style.primaryCtaText}>Valider le profil</Text>
+                    </TouchableOpacity>
+                </View>               
+
+                <View>
+                    <TouchableOpacity onPress={() => navigation.navigate("ConnectToy")} style={Style.tertiaryCta}>
+                        <Text style={Style.tertiaryCtaText}>Poursuivre</Text>
                     </TouchableOpacity>
                 </View>
             </ScrollView>

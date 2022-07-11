@@ -1,39 +1,28 @@
 import React, {createContext, useState} from "react";
 
-export const UserProfileContext = createContext({
+const UserProfileContext = createContext({
     firstname: "",
     lastname: "",
-    email: "",
     username: "",
     address: "",
-    pet:"",
-
-    setUserProfileContext: infos => {}
+    pets:""
 })
 
 const UserProfileContextProvider = ({children}) => {
-    const userProfileState = {
-        firstname: "",
-        lastname: "",
-        email: "",
-        username: "",
-        address: "",
-        pet:"",
-
-        setUserProfileContext: infos =>
-            setUserProfile(prevState => ({
-            ...prevState,
-            firstname: infos.firstname,
-            lastname: infos.lastname,
-            email: infos.email,
-            username: infos.username,
-            address: infos.address,
-            pet: infos.pet
-        }))
+    const userProfileInit = {
+        firstname: "Anna",
+        lastname: "Pellin",
+        username: "anna.pellin@gmail.com",
+        address: "7 rue du Mail 75002 Paris",
+        pets:"Cannelle"
     }
 
-    const [userProfile, setUserProfile] = useState(userProfileState);
-    return (<UserProfileContext.Provider value={userProfile}>{children}</UserProfileContext.Provider>)
+    const [userProfile, setUserProfile] = useState(userProfileInit);
+    
+    return (
+        <UserProfileContext.Provider value={{userProfile: userProfile, setUserProfile: setUserProfile}}>{children}</UserProfileContext.Provider>
+    )
 }
 
+export {UserProfileContext}
 export default UserProfileContextProvider

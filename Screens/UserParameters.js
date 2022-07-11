@@ -1,17 +1,30 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
+import {useForm} from "react-hook-form";
 import {View, Text, Image, TouchableOpacity, TextInput} from 'react-native';
+import FormInput from '../Components/FormInput';
+import {UserProfileContext} from "../Context/UserProfileContext";
 import Style from "../Style";
 
 const Parameters = () => {
 
-    const [lastname, setLastname] = useState("Pellin");
-    const [firstname, setFirstname] = useState("Anne");
-    const [datebirth, setDatebirth] = useState("13/07/1985");
-    const [email, setEmail] = useState("anne.pellin@gmail.com");
-    const [address, setAddress] = useState("3 rue du mail 75002 Paris");
+    const {userProfile, setUserProfile} = useContext(UserProfileContext);
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
+    const {control, handleSubmit, formState: {errors}} = useForm({
+        defaultValues: {
+            username: "",
+            password: ""
+        }
+    });
+
+    // const [lastname, setLastname] = useState("Pellin");
+    // const [firstname, setFirstname] = useState("Anne");
+    // const [datebirth, setDatebirth] = useState("13/07/1985");
+    // const [email, setEmail] = useState("anne.pellin@gmail.com");
+    // const [address, setAddress] = useState("3 rue du mail 75002 Paris");
+
+    const onModify = async (data) => {
+        console.log(data);
+        // e.preventDefault()
     }
     
     return (
@@ -30,27 +43,42 @@ const Parameters = () => {
 
                 <View>
                     <Text style={Style.currentText}>Nom</Text>
-                    <TextInput value={lastname} onChangeText={(lastname) => setLastname(lastname)} style={Style.labelText}/>   
+                    <FormInput
+                        name="lastname"
+                        placeholder={userProfile.lastname}
+                        control={control}
+                        rules={{required: "Veuillez renseigner un nom valide"}}
+                    />
                 </View>                
 
                 <View>
                     <Text style={Style.currentText}>Prénom</Text>
-                    <TextInput value={firstname} onChangeText={(firstname) => setFirstname(firstname)} style={Style.labelText}/>
-                </View>
-
-                <View>
-                    <Text style={Style.currentText}>Date de naissance</Text>
-                    <TextInput value={datebirth} onChangeText={(datebirth) => setDatebirth(datebirth)} style={Style.labelText}/>
+                    <FormInput
+                        name="firstname"
+                        placeholder={userProfile.firstname}
+                        control={control}
+                        rules={{required: "Veuillez renseigner un prénom valide"}}
+                    />
                 </View>
 
                 <View>
                     <Text style={Style.currentText}>Adresse email</Text>
-                    <TextInput value={email} onChangeText={(email) => setEmail(email)} style={Style.labelText}/>
+                    <FormInput
+                        name="username"
+                        placeholder={userProfile.username}
+                        control={control}
+                        rules={{required: "Veuillez renseigner un email valide"}}
+                    />
                 </View>
 
                 <View>
                     <Text style={Style.currentText}>Adresse postale</Text>
-                    <TextInput value={address} onChangeText={(address) => setAddress(address)} style={Style.labelText}/>
+                    <FormInput
+                        name="address"
+                        placeholder={userProfile.address}
+                        control={control}
+                        rules={{required: "Veuillez renseigner une adresse valide"}}
+                    />
                 </View>
 
                 <View style={Style.submitCenter}>
